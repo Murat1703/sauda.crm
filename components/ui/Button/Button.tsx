@@ -1,0 +1,29 @@
+
+'use client'
+import cls from './Button.module.css'
+
+
+type ButtonVariant =
+  | "topBtn"
+  | "secondary"
+  | "danger"
+  | "success";
+
+
+type ButtonProps = {
+    variant?:ButtonVariant,
+    children: React.ReactNode,
+    onClick?: ()=>void 
+}
+
+export default function Button({variant="topBtn", children, onClick}: ButtonProps){
+    return(
+        <button 
+            className={`${cls.btn} ${cls.btn}-${variant}`} 
+            onClick={onClick? ()=>onClick()
+            : (e)=>e.preventDefault()}
+        >
+            {children}
+        </button>
+    )
+}

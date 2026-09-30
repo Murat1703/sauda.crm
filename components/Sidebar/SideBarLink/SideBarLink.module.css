@@ -1,0 +1,15 @@
+.sideBarLink{
+    cursor: pointer;
+    display: flex;
+    width: 208px;
+    padding: 6px 10px 6px 8px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 14px;
+}
+.activeLink > p{
+    font-weight: 500;
+}
+.activeLink{
+    background: var(--bg-secondary)
+}

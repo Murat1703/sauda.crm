@@ -1,0 +1,15 @@
+.counter{
+    display: flex;
+    min-width: 20px;
+    padding: 4px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--accent-color);
+    color: var(--text-white);
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -.12px;
+    font-weight: 500;
+    border-radius: 33.833px;
+}

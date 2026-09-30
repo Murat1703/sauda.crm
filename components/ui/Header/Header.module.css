@@ -1,0 +1,19 @@
+
+.header{
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+.headerContent{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerButtons{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}

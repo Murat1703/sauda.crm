@@ -1,0 +1,8 @@
+.pageTitle{
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 52.8px */
+    letter-spacing: -0.176px;
+    color: var(--content-primary)
+}

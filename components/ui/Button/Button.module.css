@@ -1,0 +1,23 @@
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    align-self: stretch;
+    border-radius: 15px;
+}
+
+.btn-topBtn{
+    padding: 12px 20px;
+    border-radius: 17px;
+    background: var(--bg-contrast);
+    gap: 8px;
+    align-self: flex-end;
+}
+.btn-topBtn > p{
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.007px;
+}
