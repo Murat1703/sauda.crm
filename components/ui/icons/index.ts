@@ -19,3 +19,7 @@ export { default as ObjectsIcon } from './ObjectsIcon'
 export { default as UsersIcon } from './UsersIcon'
 
 export {default as PlusIcon} from './PlusIcon'
+export {default as EditIcon} from './EditIcon'
+export {default as MoreIcon} from './MoreIcon'
+
+export {default as ApprovedIcon} from './ApprovedIcon'

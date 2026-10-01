@@ -1,0 +1,9 @@
+.cardItem{
+    display: flex;
+    padding: 20px 16px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 20px;
+    background: var(--text-white);
+}

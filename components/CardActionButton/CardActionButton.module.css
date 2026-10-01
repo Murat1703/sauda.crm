@@ -1,0 +1,11 @@
+.cardActionButton{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 6px;
+    border-radius: 48px;
+}
+
+.cardActionButton:hover{
+    background: var(--bg-secondary);
+}

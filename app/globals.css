@@ -42,11 +42,13 @@
 :root{
   --background: #E3E3E3;
   --bg-contrast: rgba(32, 33, 33, 1);
-  --bg-secondary: rgba(237, 238, 235, 1);
+  --bg-secondary: #edeeeb;
   --text-primary: #232425;
   --text-secondary: #898989;
   --text-white: #fff;
   --content-primary: #161717;
+  --content-secondary: #858988;
+  --border-divide: rgba(0, 0, 0, 0.07);
   --divider: rgb(214, 214, 214);
   --text-black: rgba(26, 26, 26, 1);
   --text-gray: rgba(117, 117, 117, 1);

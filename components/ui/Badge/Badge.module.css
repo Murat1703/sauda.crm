@@ -1,0 +1,15 @@
+.badge{
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+}
+
+.category{
+    background: var(--bg-secondary);
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--content-secondary);
+}

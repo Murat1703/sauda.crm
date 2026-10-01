@@ -1,0 +1,7 @@
+.tabs{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--divider)
+}
