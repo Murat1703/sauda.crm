@@ -14,7 +14,7 @@ export default function LeadsPage(){
         <LayoutContainer>
             <PageTopContainer>
                 <Title text="Заявки"/>
-                <Button >
+                <Button variant="topBtn">
                     <PlusIcon />
                     <p>Создать заявку</p>
                 </Button>

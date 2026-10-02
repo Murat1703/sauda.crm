@@ -317,7 +317,7 @@
 .leadAttachmentsList > li:last-child{
     border: none;
 }
-.leadAttachmentsList > li > a{
+.leadAttachmentsList > li > div{
     display: flex;
     padding: 6px 0;
     flex: 1 0 0;
@@ -325,10 +325,10 @@
     align-items: center;
     align-self: stretch;
 }
-.leadAttachmentsList > li:last-child > a{
+.leadAttachmentsList > li:last-child > div{
     border: none;
 }
-.leadAttachmentsList > li > a > span{
+.leadAttachmentsList > li > div > span{
     flex: 1 0 0;
     font-size: 14px;
     line-height: 16px;
@@ -338,7 +338,10 @@
     align-items: center;
     gap: 4px;
 }
-.actionButtons > button{
+.actionButtons > button:nth-child(1),
+.actionButtons > button:nth-child(2),
+.actionButtons > button:nth-child(3)
+{
     display: flex;
     padding: 8px;
     align-items: center;
@@ -353,11 +356,6 @@
     justify-content: flex-end;
     align-items: flex-end;
     gap: space125;
-}
-.leadActionButtons > button{
-    padding: 9px 16px;
-    background: var(--Bg-Secondary, #E3E5E2);
-
 }
 .leadActionButtons > button > span{
     color: var(--content-primary);

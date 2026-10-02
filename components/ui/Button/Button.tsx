@@ -19,7 +19,7 @@ type ButtonProps = {
 export default function Button({variant="topBtn", children, onClick}: ButtonProps){
     return(
         <button 
-            className={`${cls.btn} ${cls[`btn-${variant}`]}`}
+            className={`${cls.btn} ${variant=="secondary"? cls.btnSecondary :""} ${variant=="topBtn"? cls.btnTop :""}`}
             onClick={onClick}
         >
             {children}

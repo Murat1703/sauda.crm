@@ -1,10 +1,11 @@
 import cls from './LeadInfo.module.css'
 import type {Lead} from '../../../types'
-import { ApprovedIcon, ArrowIcon, CancelIcon, ClockIcon, CommentIcon, DeliveriesIcon, DownloadIcon, PaymentIcon, ViewIcon } from '@/components/ui/icons'
+import { ApprovedIcon, ArrowIcon, CancelIcon, ClockIcon, CommentIcon, DeliveriesIcon, DownloadIcon, MoreIcon, PaymentIcon, ViewIcon } from '@/components/ui/icons'
 import Badge from '@/components/ui/Badge'
 import { LeadStatusLabels } from '@/app/leads/_constants/LeadStatusLabels'
 import Link from 'next/link'
 import Button from '@/components/ui/Button'
+import CardActionButton from '@/components/CardActionButton'
 
 type LeadInfoProps = {
     lead: Lead
@@ -220,7 +221,7 @@ export default function LeadInfo ({lead}: LeadInfoProps) {
                 <ul className={cls.leadAttachmentsList}>
                     {lead.attachments.map((link)=>(
                         <li key={link.id}>
-                            <Link href={'/'}>
+                            <div >
                                 <span>
                                     {link.name}
                                 </span>
@@ -232,7 +233,7 @@ export default function LeadInfo ({lead}: LeadInfoProps) {
                                         <DownloadIcon />
                                     </button>
                                 </div>
-                            </Link>
+                            </div>
                         </li>
 
                     ))}
@@ -251,6 +252,9 @@ export default function LeadInfo ({lead}: LeadInfoProps) {
                     <DownloadIcon />
                     <span>Скачать пакет документов</span>
                 </Button>
+                <CardActionButton cardActionType={""}>
+                    <MoreIcon />
+                </CardActionButton>
             </div>
         </div>
     )

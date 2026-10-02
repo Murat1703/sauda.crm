@@ -7,12 +7,16 @@
     border-radius: 15px;
 }
 
-.btn-topBtn{
+.btnTop{
     padding: 12px 20px;
     border-radius: 17px;
     background: var(--bg-contrast);
     gap: 8px;
     align-self: flex-end;
+}
+.btnSecondary{
+    padding: 9px 16px;
+    background: #E3E5E2;
 }
 .btn-topBtn > p{
     font-size: 18px;
