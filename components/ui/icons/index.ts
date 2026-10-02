@@ -27,3 +27,5 @@ export {default as ShowMoreIcon} from './ShowMoreIcon'
 
 export {default as CompareIcon } from './CompareIcon'
 export {default as CloseIcon } from './CloseIcon'
+
+export {default as ArrowIcon } from './ArrowIcon'

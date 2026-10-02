@@ -1,0 +1,153 @@
+import cls from './LeadInfo.module.css'
+import type {Lead} from '../../../types'
+import { ApprovedIcon, ArrowIcon } from '@/components/ui/icons'
+import Badge from '@/components/ui/Badge'
+
+type LeadInfoProps = {
+    lead: Lead
+}
+
+export default function LeadInfo ({lead}: LeadInfoProps) {
+    return(
+        <div className={cls.leadInfoWrapper}>
+            <div className={cls.leadInfoDetails}>
+                <div className={cls.top}>
+                    <h3>О Заявке</h3>
+                    <button>
+                        <ArrowIcon />
+                    </button>
+                </div>
+                <div className={cls.leadInfoData}>
+                    <div className={cls.leadInfoStatus}>
+                        <div>
+                            <div className={cls.leadInfoCard}>
+                                <div className={cls.leadInfoCardHeader}>
+                                    <p>Данные заявки</p>
+                                </div>
+                                <ul className={cls.leadInfoCardList}>
+                                    <li>
+                                        <span>ID заявки</span>
+                                        <span>{lead.number}</span>
+                                    </li>
+                                    <li>
+                                        <span>Дата публикации</span>
+                                        <span>{lead.createdAt}</span>
+                                    </li>
+                                    <li>
+                                        <span>Город, регион</span>
+                                        <span>{lead.city}</span>
+                                    </li>
+                                    <li>
+                                        <span>Объект</span>
+                                        <span>{lead.object}</span>
+                                    </li>
+                                    <li>
+                                        <span>Уточнения</span>
+                                        <span>{lead.object}</span>
+                                    </li>
+                                    <li>
+                                        <span>Заявку создал</span>
+                                        <span>{lead.responsible.name}</span>
+                                    </li>
+                                    <li>
+                                        <span>Ответственный</span>
+                                        <span>{lead.responsible.name}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className={cls.leadInfoCard}>
+                                <div className={cls.leadInfoCardHeader}>
+                                    <p>Согласование</p>
+                                </div>
+                                <ul className={cls.leadInfoApprovalList}>
+                                    {lead.approvals.map((item)=>(
+                                        <li
+                                            key={item.id}
+                                        >
+                                            <span className={`${item.approved? cls.approved: cls.notApproved}`}>
+                                                {item.approved? <ApprovedIcon />: ""}
+                                            </span>
+                                            <div className={cls.approvalItem}>
+                                                <div className={cls.approvedPerson}>
+                                                    <span>{item.name}</span>
+                                                    <span>{item.position}</span>
+                                                </div>
+                                                <span>11.06.26 в 12.00</span>
+                                            </div>
+                                        </li>
+
+                                    ))}
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div className={cls.leadInfoCard}>
+                            <div className={cls.leadInfoCardHeader}>
+                                <p>Текущий статус</p>
+                            </div>
+                            <ul className={cls.leadInfoCardList}>
+                                    <li>
+                                        <span>Статус заявки</span>
+                                        <span>{lead.status}</span>
+                                    </li>
+                                    <li>
+                                        <span>Отклики</span>
+                                        <span>{lead.stats.responses}</span>
+                                    </li>
+                                    <li>
+                                        <span>Просмотры</span>
+                                        <span>{lead.stats.views}</span>
+                                    </li>
+                                    <li>
+                                        <span>Даты приема откликов</span>
+                                        <span>24.07—10.08.26</span>
+                                    </li>
+                                    <li>
+                                        <span>Отбор победителей</span>
+                                        <span>В Назначенный день</span>
+                                    </li>
+                                    <li>
+                                        <span>Дата подведения итогов</span>
+                                        <span>11.08.26</span>
+                                    </li>
+                                    <li>
+                                        <span>Бюджет</span>
+                                        <span>{lead.budget}</span>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className={cls.leadInfoCategories}>
+                        <div className={cls.leadInfoCard}>
+                            <div className={cls.leadInfoCardHeader}>
+                                <p>Категории</p>
+                            </div>
+                            <div className={cls.leadInfoCardCategories}>
+                                {lead.categories.map((item, index)=>(
+                                    <Badge 
+                                        type='category'
+                                        key={index}
+                                        text={item}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div className={cls.leadInfoDetails}>
+                <div className={cls.top}>
+                    <h3>Предмет закупки</h3>
+                    <button>
+                        <ArrowIcon />
+                    </button>
+                </div>
+                <table>
+                    <thead>
+                        
+                    </thead>
+                </table>
+            </div>
+        </div>
+    )
+}
