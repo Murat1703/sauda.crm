@@ -1,0 +1,23 @@
+.tooltip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: max-content;
+    top: -25px ;
+    /* transform: translateY(-100%); */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.tooltipText{
+    display: flex;
+    padding: 4px 8px;
+    gap: 8px;
+    border-radius: 8px;
+    background: #202121;
+    color: var(--text-white);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}

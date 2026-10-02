@@ -1,0 +1,3 @@
+import CollectingResponsesActions from './CollectingResponsesActions'
+
+export default CollectingResponsesActions

@@ -1,0 +1,46 @@
+.summingUpContainer{
+    display: flex;
+    align-items: flex-start;
+}
+.summingUpContent{
+    display: flex;
+    width: 236px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+.summingUpContent > span{
+   color: #804CC6;
+   background-color: #F0E8FF;
+}
+.summingDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+.summingDetails > div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+.summingDetails > div > span{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+.summingDetails > div > span:nth-child(1){
+    color: var(--content-secondary);
+}
+.summingDetails > div > span:nth-child(2){
+    font-weight: 500;
+}
+.summingUpButtonsList{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

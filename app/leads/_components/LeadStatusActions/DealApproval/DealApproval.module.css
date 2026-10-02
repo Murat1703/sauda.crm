@@ -1,0 +1,37 @@
+.dealApprovalContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+}
+.top{
+    display: flex;
+    align-self: stretch;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.top > span:nth-child(1){
+    background: #D2F9D4;
+    color: #059669;
+}
+.dealDetails {
+    display: flex;
+    flex: 1 0 0;
+    align-self: stretch;
+    justify-content: space-between;
+}
+.dealDetails > span{
+    font-size: 14px;
+    line-height: 16px;
+}
+.dealDetails > span:nth-child(1){
+    color: var(--content-secondary);
+}
+.dealApprovalContainer > button{
+    border-radius: 15px;
+    padding: 9px 16px;
+    background: var(--bg-secondary);
+    color: var(--content-primary);
+}

@@ -1,7 +1,7 @@
 import cls from './CardItem.module.css'
 
 type CardItemProps = {
-    children: React.ReactNode
+    children: React.ReactNode,
 }
 
 export default function CardItem({children}:CardItemProps){

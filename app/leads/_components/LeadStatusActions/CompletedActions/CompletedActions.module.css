@@ -1,0 +1,52 @@
+.completedContainer{
+    display: flex;
+    width: 276px;
+    align-items: flex-end;
+    align-self: stretch;
+}
+.completedContent{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+}
+.top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+}
+.top > span{
+    background: #D2F9D4;
+    color: #059669;
+}
+.winnersBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.winnersBlock > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.winnersBlock > div > span{
+    font-size: 14px;
+    line-height: 16px;
+}
+.winnersBlock > div > span:nth-child(1){
+    width: 120px;
+    color: var(--content-secondary);
+}
+.completedContent > button{
+    padding: 9px 16px;
+    background: var(--bg-secondary);
+    color: var(--content-primary);
+}

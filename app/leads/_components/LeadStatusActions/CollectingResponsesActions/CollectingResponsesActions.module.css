@@ -1,0 +1,55 @@
+.collectingResponsesContainer{
+    display: flex;
+    align-items: flex-end;
+}
+.collectingResponsesContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 236px;
+}
+.collectingResponsesContent > span{
+    background-color: #E8F2FF;
+    color: #006FFF;
+}
+.responsesDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.responsesDetails > div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+.responsesDetails > div > span:nth-child(1){
+    width: 168px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+
+    color: var(--content-secondary);
+}
+.counters{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.counters > span{
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--content-primary);
+    font-weight: 500;
+}
+
+.counters > span:nth-child(2){
+    color: #006FFF;
+}
+.collectingResponsesAction{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

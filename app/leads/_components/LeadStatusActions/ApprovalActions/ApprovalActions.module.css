@@ -27,27 +27,46 @@
 .approvalsDetailsInfo{
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+}
+.approvalsDetailsInfo > div{
+    display: flex;
+    align-items: flex-start;
     gap: 8px;
+}
+.approvalsDetailsInfo > div > span:nth-child(1){
+    margin-top: 4px;
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+.approvalsDetailsInfo > div > span:nth-child(1)::after{
+    width: 1px;
+    height: 23px;
+    position: absolute;
+    bottom: -35px;
+    left: 4px;
+    content: '';
+    background: var(--content-secondary);
+}
+.approvalsDetailsInfo > div:last-child > span:nth-child(1)::after{
+    display: none;
 }
 .approvalsNameDetails{
     display: flex;
     width: 152px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
-}
-.approvalsNameDetails > div{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 2px;
 }
-.approvalsNameDetails > div > span:nth-child(1){
+
+.approvalsNameDetails > span:nth-child(1){
     font-size: 14px;
     line-height: 16px;
     color: var(--content-primary);
 }
-.approvalsNameDetails > div > span:nth-child(2){
+.approvalsNameDetails  > span:nth-child(2){
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -79,4 +98,10 @@
     width: 6px;
     height: 6px;
     border-radius: 320px;
+}
+.approvalsMore{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
 }

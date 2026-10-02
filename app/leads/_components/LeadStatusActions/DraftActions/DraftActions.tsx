@@ -17,7 +17,7 @@ export default function DraftActions({status}: DraftActionsProps) {
                     <EditIcon />
                     <span>Редактировать</span>
                 </Button>
-                <CardActionButton>
+                <CardActionButton cardActionType="">
                     <MoreIcon />
                 </CardActionButton>
             </div>

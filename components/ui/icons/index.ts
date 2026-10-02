@@ -23,3 +23,7 @@ export {default as EditIcon} from './EditIcon'
 export {default as MoreIcon} from './MoreIcon'
 
 export {default as ApprovedIcon} from './ApprovedIcon'
+export {default as ShowMoreIcon} from './ShowMoreIcon'
+
+export {default as CompareIcon } from './CompareIcon'
+export {default as CloseIcon } from './CloseIcon'
