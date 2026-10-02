@@ -1053,7 +1053,14 @@ export const leadsMock: Lead[] = [
       deliveryCondition: "Доставка на объект",
       paymentCondition: "30% предоплата, 70% после поставки",
     },
-    attachments: [],
+    attachments: [
+      {
+        id: 1,
+        name: "Техническое задание.pdf",
+        url: "#",
+      },
+    ],
+
   },
 
   {

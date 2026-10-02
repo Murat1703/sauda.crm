@@ -4,7 +4,7 @@ import Badge from '@/components/ui/Badge';
 import { useState } from 'react';
 import cls from './ApprovalActions.module.css'
 import type {Lead} from '../../../types';
-import {LeadStatusLabels} from '../../LeadStatusLabels';
+import {LeadStatusLabels} from '../../../_constants/LeadStatusLabels';
 import { ApprovedIcon, ShowMoreIcon } from '@/components/ui/icons';
 import CardActionButton from '@/components/CardActionButton';
 import LeadDetails from '../../LeadDetails';

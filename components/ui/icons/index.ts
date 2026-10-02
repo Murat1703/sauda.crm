@@ -29,3 +29,13 @@ export {default as CompareIcon } from './CompareIcon'
 export {default as CloseIcon } from './CloseIcon'
 
 export {default as ArrowIcon } from './ArrowIcon'
+export {default as ClockIcon } from './ClockIcon'
+
+export {default as DeliveryIcon } from './DeliveryIcon'
+export {default as PaymentIcon } from './PaymentIcon'
+
+export {default as ViewIcon } from './ViewIcon'
+export {default as DownloadIcon } from './DownloadIcon'
+
+export {default as CancelIcon } from './CancelIcon'
+export {default as CommentIcon } from './CommentIcon'

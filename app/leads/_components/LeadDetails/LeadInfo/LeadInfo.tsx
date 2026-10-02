@@ -1,7 +1,10 @@
 import cls from './LeadInfo.module.css'
 import type {Lead} from '../../../types'
-import { ApprovedIcon, ArrowIcon } from '@/components/ui/icons'
+import { ApprovedIcon, ArrowIcon, CancelIcon, ClockIcon, CommentIcon, DeliveriesIcon, DownloadIcon, PaymentIcon, ViewIcon } from '@/components/ui/icons'
 import Badge from '@/components/ui/Badge'
+import { LeadStatusLabels } from '@/app/leads/_constants/LeadStatusLabels'
+import Link from 'next/link'
+import Button from '@/components/ui/Button'
 
 type LeadInfoProps = {
     lead: Lead
@@ -88,7 +91,7 @@ export default function LeadInfo ({lead}: LeadInfoProps) {
                             <ul className={cls.leadInfoCardList}>
                                     <li>
                                         <span>Статус заявки</span>
-                                        <span>{lead.status}</span>
+                                        <span>{LeadStatusLabels[lead.status]}</span>
                                     </li>
                                     <li>
                                         <span>Отклики</span>
@@ -142,11 +145,112 @@ export default function LeadInfo ({lead}: LeadInfoProps) {
                         <ArrowIcon />
                     </button>
                 </div>
-                <table>
+                <table className={cls.table}>
                     <thead>
-                        
+                        <tr>
+                            <th className={cls.numberCol}>№</th>
+                            <th className={cls.titleCol}>Наименование</th>
+                            <th className={cls.brandCol}>Бренд</th>
+                            <th className={cls.modelCol}>Модель / Артикул</th>
+                            <th className={cls.quantityCol}>Кол-во</th>
+                            <th className={cls.unitCol}>Ед.</th>
+                        </tr>
                     </thead>
+                    <tbody>
+                        {lead.items.map((item, index)=>(
+                            <tr key={item.id}>
+                                <td className={cls.numberCol}>{index + 1}</td>
+                                <td className={cls.titleCol}>{item.name}</td>
+                                <td className={cls.brandCol}>{item.brand}</td>
+                                <td className={cls.modelCol}>{item.model? item.model : "Арт №123123123"}</td>
+                                <td className={cls.quantityCol}>{item.quantity}</td>
+                                <td className={cls.unitCol}>{item.unit}</td>                           
+                            </tr>
+                        ))}
+                    </tbody>
                 </table>
+            </div>
+            <div className={cls.leadInfoDetails}>
+                <div className={cls.top}>
+                    <h3>Условия доставки и оплаты</h3>
+                    <button>
+                        <ArrowIcon />
+                    </button>
+                </div>
+                <div className={cls.bottom}>
+                    <div className={cls.deliveryInfo}>
+                        <ClockIcon />
+                        <div className={cls.deliveryTimeInfo}>
+                            <span>Cрок поставки:</span>
+                            <div className={cls.deliveryItems}>
+                            {lead.delivery.terms.map((item, index)=>(
+                                <div key={index}>
+                                    <span>{item.positions}</span>
+                                    <span>{item.date}</span>
+                                </div>
+                            ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className={cls.deliveryOptions}>
+                        <div className={cls.deliveryInfo}>
+                            <DeliveriesIcon />
+                            <div className={cls.deliveryInfoDetails}>
+                                <span>Условия доставки</span>
+                                <span>Доставка от поставщика</span>
+                            </div>
+                        </div>
+                        <div className={cls.deliveryInfo}>
+                            <PaymentIcon />
+                            <div className={cls.deliveryInfoDetails}>
+                                <span>Условия оплаты:</span>
+                                <span>Доставка от поставщика</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={cls.leadInfoDetails}>
+                <div className={cls.top}>
+                    <h3>Техническая документация и вложения</h3>
+                    <button>
+                        <ArrowIcon />
+                    </button>
+                </div>
+                <ul className={cls.leadAttachmentsList}>
+                    {lead.attachments.map((link)=>(
+                        <li key={link.id}>
+                            <Link href={'/'}>
+                                <span>
+                                    {link.name}
+                                </span>
+                                <div className={cls.actionButtons}>
+                                    <button>
+                                        <ViewIcon />
+                                    </button>
+                                    <button>
+                                        <DownloadIcon />
+                                    </button>
+                                </div>
+                            </Link>
+                        </li>
+
+                    ))}
+                </ul>
+            </div>
+            <div className={cls.leadActionButtons}>
+                <Button variant={'secondary'}>
+                    <CancelIcon />
+                    <span>Отменить заявку</span>
+                </Button>
+                <Button variant={'secondary'}>
+                    <CommentIcon />
+                    <span>Комментировать</span>
+                </Button>
+                <Button variant={'secondary'}>
+                    <DownloadIcon />
+                    <span>Скачать пакет документов</span>
+                </Button>
             </div>
         </div>
     )

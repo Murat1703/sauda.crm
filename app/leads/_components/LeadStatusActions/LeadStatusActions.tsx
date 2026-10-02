@@ -1,6 +1,6 @@
 
 import cls from './LeadStatusActions.module.css'
-import {LeadStatusLabels} from '../LeadStatusLabels'
+import {LeadStatusLabels} from '../../_constants/LeadStatusLabels'
 import DraftActions from './DraftActions';
 import ApprovalActions from './ApprovalActions';
 import type {Lead} from '../../types';
