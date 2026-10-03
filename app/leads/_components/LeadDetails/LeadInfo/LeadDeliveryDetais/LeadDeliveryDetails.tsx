@@ -1,8 +1,9 @@
 import cls from './LeadDeliveryDetails.module.css'
 import { ClockIcon, DeliveriesIcon, PaymentIcon } from '@/components/ui/icons'
+import type { LeadDelivery } from '@/app/leads/types'
 
 type LeadDeliveryDetailsProps = {
-    delivery: object
+    delivery: LeadDelivery
 }
 
 
@@ -24,20 +25,20 @@ export default function LeadDeliveryDetails ({delivery}:LeadDeliveryDetailsProps
                 </div>
             </div>
             <div className={cls.deliveryOptions}>
-                        <div className={cls.deliveryInfo}>
+                <div className={cls.deliveryInfo}>
                             <DeliveriesIcon />
                             <div className={cls.deliveryInfoDetails}>
                                 <span>Условия доставки</span>
                                 <span>{delivery.deliveryCondition}</span>
                             </div>
-                        </div>
-                        <div className={cls.deliveryInfo}>
+                </div>
+                <div className={cls.deliveryInfo}>
                             <PaymentIcon />
                             <div className={cls.deliveryInfoDetails}>
                                 <span>Условия оплаты:</span>
                                 <span>{delivery.paymentCondition}</span>
                             </div>
-                        </div>
+                </div>
             </div>
         </div>
 

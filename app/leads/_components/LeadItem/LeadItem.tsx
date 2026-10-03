@@ -3,20 +3,13 @@ import type { Lead } from "../../types"
 import cls from './LeadItem.module.css'
 import Badge from "@/components/ui/Badge";
 import LeadStatusActions from "../LeadStatusActions";
+import { formatDate } from "@/lib/formatDate";
 
 type LeadItemProps = {
   lead: Lead;
 };
 
-export const formatDateTime = (date: string) => {
-  return new Intl.DateTimeFormat("ru-RU", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(new Date(date));
-};
+
 
 export default function LeadItem({lead}:LeadItemProps){
     return(
@@ -48,7 +41,7 @@ export default function LeadItem({lead}:LeadItemProps){
                         color: lead.responseDeadline ? "var(--text-black)" : "var(--content-secondary)"
                     }}>
                         {lead.responseDeadline 
-                        ? formatDateTime(lead.responseDeadline) 
+                        ? formatDate(lead.responseDeadline) 
                         : "Не указано"}
                     </span>
                 </div>

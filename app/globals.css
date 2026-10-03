@@ -1,31 +1,18 @@
 @font-face {
-  font-family: 'СoFo Weather';
-  src: url('/assets/fonts/CoFo_Sans_&_Weather/CoFoSans-Regular-Trial.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'CoFo Sans';
+  src: url('/assets/fonts/CoFo_Sans/cofo-sans-vf.woff2') format('woff2');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'СoFo Weather';
-  src: url('/assets/fonts/CoFo_Sans_&_Weather/CoFoSans-Medium-Trial.woff2') format('woff2');
-  font-weight: 500;
+  src: url('/assets/fonts/CoFo_Weather/cofo-weather-vf.woff2') format('woff2');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'СoFo Weather';
-  src: url('/assets/fonts/CoFo_Sans_&_Weather/CoFoSans-Bold-Trial.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'СoFo Weather';
-  src: url('/assets/fonts/CoFo_Sans_&_Weather/CoFoWeather-WideBlack.woff2') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 :root {
   --background: #ffffff;
@@ -56,6 +43,7 @@
   --chart-blue: #96B7F6;
   --chart-gray: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #DCDDE0;
   --chart-violet: #AC4DFF;
+  --font-title: "CoFo Weather";
 }
 
 html {
@@ -73,7 +61,7 @@ body {
   flex-direction: column;
   color: var(--text-primary);
   background: var(--background);
-  font-family: "СoFo Weather", sans-serif;
+  font-family: "CoFo Sans", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -85,7 +73,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "СoFo Weather", sans-serif;
+  font-family: "CoFo Sans", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;

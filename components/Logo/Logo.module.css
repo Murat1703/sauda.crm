@@ -2,8 +2,9 @@
     display: flex;
     gap: 4px;
     align-items: center;
+    font-family: 'CoFo Weather', sans-serif;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
     font-feature-settings: 'salt' on;
 }
 .logo > span{

@@ -21,6 +21,9 @@
     height: 2px;
     background: var(--accent-color);
 }
+.tabItemActive > span{
+    font-weight: 500;
+}
 .tabItem > span{
     /* color: var(--text-secondary); */
 }

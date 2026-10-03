@@ -1,17 +1,19 @@
 'use client'
 
 import cls from './LeadResponseDetails.module.css'
-import type { LeadResponse } from '@/app/leads/types'
+import type { LeadDelivery, LeadResponse } from '@/app/leads/types'
 import Switch from '@/components/Switch'
 import { formatDate } from '@/lib/formatDate'
 import { formatPrice } from '@/lib/formatPrice'
 import { useState } from 'react'
 import LeadDeliveryDetails from '../../LeadInfo/LeadDeliveryDetais'
-import { ArrowIcon, DownloadIcon, ViewIcon } from '@/components/ui/icons'
+import { ArrowIcon, CancelIcon, CheckIcon, DownloadIcon, EditIcon, ViewIcon } from '@/components/ui/icons'
+import Button from '@/components/ui/Button'
+import CancelButton from '@/components/ui/icons/CancelIcon'
 
 type LeadResponseDetailsProps = {
     details: LeadResponse, 
-    leadDetails: object
+    leadDetails: LeadDelivery
 }
 
 export default function LeadResponseDetails({leadDetails, details}: LeadResponseDetailsProps){
@@ -117,8 +119,21 @@ export default function LeadResponseDetails({leadDetails, details}: LeadResponse
                     </li>
 
                 </ul>
+            </div>  
+            <div className={cls.leadResponseButtons}>
+                <Button variant='secondary'>
+                    <CancelIcon/>
+                    <span>Отклонить</span>
+                </Button>
+                <Button variant='secondary'>
+                    <EditIcon/>
+                    <span>Отклонить</span>
+                </Button>
+                <Button variant='success'>
+                    <CheckIcon/>
+                    <span>Выбрать предложение</span>
+                </Button>
             </div>
-
         </div>
     )
 }

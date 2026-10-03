@@ -1,0 +1,15 @@
+.input{
+    display: flex;
+    padding: 9px 12px;
+    align-items: center;
+    gap: 6px;
+    align-self: stretch;
+    border-radius: 15px;
+    border: var(--Border-Divider, 1px) solid var(--border-low, rgba(0, 0, 0, 0.16));
+    background: var(--bg-primary, #FFF);
+    outline: none;
+    color: var(--content-primary);
+}
+.input:focus{
+    border: var(--Border-Divider, 1px) solid var(--border-low, rgba(0, 0, 0, 0.45));
+}

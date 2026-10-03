@@ -1,0 +1,12 @@
+.label{
+    display: flex;
+    align-items: center;
+    gap:2px;
+}
+.label > *{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    color: var(--content-secondary);
+}

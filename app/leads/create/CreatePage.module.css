@@ -1,0 +1,45 @@
+.createPageWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+}
+.titleBlock{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.titleBlock > a{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titleBlock > h2{
+    color: var(--content-primary, #161717);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 38.4px */
+    font-family: var(--font-title), sans-serif;
+}
+.topButtons{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.topButtons > button:nth-child(1),
+.topButtons > button:nth-child(2) {
+    background: var(--text-white);
+}
+.topButtons > button:nth-child(1) > span,
+.topButtons > button:nth-child(2) > span{
+    color: var(--content-primary);
+}

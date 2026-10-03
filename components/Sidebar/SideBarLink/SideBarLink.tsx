@@ -16,8 +16,10 @@ type SideBarLinkProps = {
 export default function SideBarLink({link, text, count, icon}:SideBarLinkProps){
 
     const pathname = usePathname();
-    const isActive = pathname === link;
-
+    const isActive =
+    link === "/"
+    ? pathname === "/"
+    : pathname === link || pathname.startsWith(`${link}/`);
 
     return(
         <Link href={link} className={`${cls.sideBarLink} ${isActive? cls.activeLink: ""}`}>

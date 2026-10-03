@@ -25,6 +25,7 @@
     line-height: 120%; /* 24px */
     letter-spacing: 0.2px;
     color: var(--content-primary);
+    font-family: var(--font-title), sans-serif;
 }
 .top > button{
     display: flex;

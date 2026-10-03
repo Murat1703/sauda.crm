@@ -47,3 +47,9 @@ export {default as StarIcon } from './StarIcon'
 export {default as ShieldIcon } from './ShieldIcon'
 
 export {default as ArrowRight } from './ArrowRight'
+export {default as CheckIcon } from './CheckIcon'
+
+export {default as BackIcon } from './BackIcon'
+export {default as RemoveIcon } from './BackIcon'
+
+export {default as MenuIcon } from './MenuIcon'

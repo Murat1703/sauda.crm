@@ -25,3 +25,7 @@
     line-height: 24px; /* 133.333% */
     letter-spacing: -0.007px;
 }
+.btnSuccess{
+    background: var(--accent-color);
+    padding: 9px 16px;
+}

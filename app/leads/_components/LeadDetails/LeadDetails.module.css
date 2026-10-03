@@ -17,6 +17,7 @@
     box-shadow: 0 8px 8px 0 rgba(41, 45, 51, 0.04), 0 12px 28px 0 rgba(41, 45, 51, 0.12);
     background: var(--text-white);
     position: relative;
+    padding-bottom: 24px;
 }
 .leadDetailsHeader{
     display: flex;
@@ -32,6 +33,7 @@
     line-height: 120%; /* 28.8px */
     letter-spacing: 0.317px;
     flex: 1 0 0;
+    font-family: var(--font-title), sans-serif;
 }
 .leadDetailsContentContainer{
     align-self: stretch;
