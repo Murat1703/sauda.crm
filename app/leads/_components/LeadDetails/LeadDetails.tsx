@@ -8,6 +8,8 @@ import { CloseIcon } from "@/components/ui/icons"
 import TabsList from "@/components/TabsList"
 import type { TabItemProps } from "@/components/TabsList/TabItem/TabItem"
 import LeadInfo from "./LeadInfo"
+import LeadViews from "./LeadViews"
+import LeadResponses from "./LeadResponses"
 
 type LeadDetailsprops = {
     lead: Lead,
@@ -51,6 +53,8 @@ export default function LeadDetails({lead, onClose}:LeadDetailsprops){
                     <TabsList tabs={tabsData} onChange={handleChange} activeTab={activeTab} />
                     <div className={cls.leadDetailsContentBody}>
                         {activeTab == "details" && <LeadInfo lead={lead}/>}
+                        {activeTab == "views" && <LeadViews lead={lead}/>}
+                        {activeTab == "responses" && <LeadResponses lead={lead}/>}
                     </div>
 
                 </div>

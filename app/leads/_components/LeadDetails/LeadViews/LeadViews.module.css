@@ -1,0 +1,47 @@
+.leadViewsWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+.leadViewsItems{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+.leadViewsItems > li{
+    display: flex;
+    padding: 8px 12px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(--border-thin, rgba(0, 0, 0, 0.07));
+    background: #FFF;
+}
+.left{
+    display: flex;
+    padding-right: 120px;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
+.logo{
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.companyName{
+    flex: 1 0 0;
+}
+.viewDate{
+    color: #858988;
+}
+.viewsButtons{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

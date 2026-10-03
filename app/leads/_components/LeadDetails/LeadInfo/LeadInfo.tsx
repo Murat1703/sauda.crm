@@ -3,9 +3,9 @@ import type {Lead} from '../../../types'
 import { ApprovedIcon, ArrowIcon, CancelIcon, ClockIcon, CommentIcon, DeliveriesIcon, DownloadIcon, MoreIcon, PaymentIcon, ViewIcon } from '@/components/ui/icons'
 import Badge from '@/components/ui/Badge'
 import { LeadStatusLabels } from '@/app/leads/_constants/LeadStatusLabels'
-import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import CardActionButton from '@/components/CardActionButton'
+import LeadDeliveryDetails from './LeadDeliveryDetais'
 
 type LeadInfoProps = {
     lead: Lead
@@ -104,15 +104,15 @@ export default function LeadInfo ({lead}: LeadInfoProps) {
                                     </li>
                                     <li>
                                         <span>Даты приема откликов</span>
-                                        <span>24.07—10.08.26</span>
+                                        <span>{lead.responseDeadline}</span>
                                     </li>
                                     <li>
                                         <span>Отбор победителей</span>
-                                        <span>В Назначенный день</span>
+                                        <span>{lead.winnerSelection}</span>
                                     </li>
                                     <li>
                                         <span>Дата подведения итогов</span>
-                                        <span>11.08.26</span>
+                                        <span>{lead.resultsDate}</span>
                                     </li>
                                     <li>
                                         <span>Бюджет</span>
@@ -178,7 +178,7 @@ export default function LeadInfo ({lead}: LeadInfoProps) {
                         <ArrowIcon />
                     </button>
                 </div>
-                <div className={cls.bottom}>
+                {/* <div className={cls.bottom}>
                     <div className={cls.deliveryInfo}>
                         <ClockIcon />
                         <div className={cls.deliveryTimeInfo}>
@@ -198,18 +198,19 @@ export default function LeadInfo ({lead}: LeadInfoProps) {
                             <DeliveriesIcon />
                             <div className={cls.deliveryInfoDetails}>
                                 <span>Условия доставки</span>
-                                <span>Доставка от поставщика</span>
+                                <span>{lead.delivery.deliveryCondition}</span>
                             </div>
                         </div>
                         <div className={cls.deliveryInfo}>
                             <PaymentIcon />
                             <div className={cls.deliveryInfoDetails}>
                                 <span>Условия оплаты:</span>
-                                <span>Доставка от поставщика</span>
+                                <span>{lead.delivery.paymentCondition}</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <LeadDeliveryDetails delivery={lead.delivery}/>
             </div>
             <div className={cls.leadInfoDetails}>
                 <div className={cls.top}>

@@ -1,0 +1,181 @@
+.leadResponseDetailsContent{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    display: flex;
+    align-self: stretch;
+    flex: 1 0 0;
+}
+.leadResponseDetailItem{
+    display: flex;
+    align-self: stretch;
+    flex: 1 0 0;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+.leadResponseDetailHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.leadResponseDetailHeader > h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: .2px;
+    color: var(--content-primary);
+}
+.leadResponseDetailHeader > span{
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--content-secondary);
+}
+.leadResponseMenu{
+    display: flex;
+    padding: 6px 0;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 16px;
+}
+.leadResponseTable{
+    border-radius: 10px;
+    border: 1px solid var(--border-thin, rgba(0, 0, 0, 0.07));
+}
+.leadResponseTable  thead{
+    height: 32px;
+    background: var(--bg-secondary-light, #EDEEEB);
+}
+.leadResponseTable  thead  > th {
+    display: flex;
+    height: 32px;
+    padding: 0 12px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+.leadResponseTable > thead th:nth-child(1){
+    border-top-left-radius: 8px;
+    width: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.leadResponseTable > thead tr  th:nth-child(1) > button{
+    width: 14px;
+    height: 14px;
+    margin-left: 50%;
+    transform: translate(50%, 50%);
+    border-radius: 4px;
+    background: rgba(32, 33, 33, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.07)
+}
+
+.leadResponseTable > thead tr th:last-child{
+    border-top-right-radius: 8px;
+}
+.leadResponseTable > thead >tr > th{
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 12px;
+    color: #858988;
+}
+.leadResponseTable > tbody tr th{
+    font-size: 14px;
+    list-style: 16px;
+    padding: 0 12px 6px 12px;
+}
+.leadResponseTable > tbody > tr{
+    border-bottom: 1px solid red;
+}
+.leadResponseTable tfoot tr{
+    height: 48px;
+}
+.leadResponseTable tfoot tr td{
+    height: 100%;
+    /* display: flex; */
+    padding: 0 12px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch
+}
+.totalText{
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+}
+.totalPrice{
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+.leadResponseDeliveryInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: stretch;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+}
+.top > h3,
+.leadResponseComment > h3,
+.leadResponseAttachments > h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: .2px;
+    color: var(--content-primary);
+}
+.leadResponseComment{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.leadResponseComment > p{
+    max-width: 840px;
+}
+.leadResponseAttachments{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 12px;
+}
+.leadResponseAttachmentsList{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+.leadResponseAttachmentList > li{
+    display: flex;
+    padding: 6px 0;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-bottom: 0.5px solid var(--border-low, rgba(0, 0, 0, 0.16));
+}
+.leadResponseAttachmentList > li:last-child{
+    border: none;
+}
+.attachmentButtons{
+    display: flex;
+    align-items: flex-start;
+}
+.attachmentButtons > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}

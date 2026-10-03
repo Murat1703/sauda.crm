@@ -1,0 +1,40 @@
+.bottom{
+    display: flex;
+    align-self: stretch;
+    flex: 1 0 0;
+    gap: 48px;
+}
+.deliveryInfo{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    flex:  1 0 0;
+}
+.deliveryOptions{
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: 32px;
+}
+.deliveryInfoDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+.deliveryInfoDetails > span{
+    font-size: 14px;
+    line-height: 16px;
+}
+.deliveryInfoDetails > span:nth-child(1){
+    color: var(--content-secondary);
+}
+.deliveryInfoDetails > div{
+    align-self: stretch;
+}
+.deliveryInfoDetails > div > div{
+    display: flex;
+    justify-content: space-between;
+}

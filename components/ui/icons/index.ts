@@ -39,3 +39,11 @@ export {default as DownloadIcon } from './DownloadIcon'
 
 export {default as CancelIcon } from './CancelIcon'
 export {default as CommentIcon } from './CommentIcon'
+
+export {default as LikeIcon } from './LikeIcon'
+export {default as ResponsesIcon } from './ResponsesIcon'
+
+export {default as StarIcon } from './StarIcon'
+export {default as ShieldIcon } from './ShieldIcon'
+
+export {default as ArrowRight } from './ArrowRight'

@@ -1,0 +1,121 @@
+.leadResponsesWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+.leadResponsesTop{
+    align-self: stretch;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+.leadResponsesTop > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 1 0 0;
+}
+.leadResponsesTop > div > span:nth-child(1){
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--content-secondary);
+}
+.leadResponsesTop > div > span:nth-child(2){
+    font-weight: 500;
+    color: var(--content-primary);
+    line-height: 22px;
+}
+.leadResponsesList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: stretch;
+    align-items: flex-start;
+    list-style: none;
+}
+.leadResponsesList > li{
+    padding: 12px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    background-color: var(--text-color);
+}
+.leadResponseItemTop{
+    display: flex;
+}
+.leadResponsesInfo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
+.logo{
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.leadResponseCompanyInfo{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 1 0 0;
+}
+.rating{
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.rating > div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.rating > div > span{
+    font-size: 12px;
+    line-height: 14px;
+}
+.rating > div > span:nth-child(2){
+    color: var(--content-secondary);
+}
+.leadResponseItemsCount{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    /* flex: 1 0 0; */
+}
+.leadResponseItemsPrice > span:nth-child(1),
+.leadResponseItemsCount > span:nth-child(1){
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    color: var(--content-secondary);
+}
+.leadResponseItemsPrice{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 150px;
+}
+.cost{
+    font-weight: 500;
+}
+.leadResponsesButtons{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+

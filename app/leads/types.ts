@@ -109,4 +109,51 @@ export type Lead = {
   delivery: LeadDelivery;
 
   attachments: LeadAttachment[];
+  viewsDetails?: LeadView[];
+  responsesDetails?: LeadResponse[];
+
+};
+
+
+export type LeadView = {
+  id: number;
+  companyName: string;
+  viewedAt: string;
+  isFavorite?: boolean;
+};
+
+export type LeadResponseItem = {
+  id: number;
+  name: string;
+  model?: string;
+  brand?: string;
+  quantity: number;
+  unit: string;
+  pricePerUnit: number;
+  total: number;
+  isAlternative?: boolean;
+};
+
+export type LeadResponse = {
+  id: number;
+
+  supplier: {
+    id: number;
+    name: string;
+    rating: number;
+    reliability: number;
+  };
+
+  respondedAt: string;
+
+  positions: {
+    offered: number;
+    total: number;
+  };
+
+  subtotal: number;
+  deliveryCost: number;
+  totalWithDelivery: number;
+
+  items: LeadResponseItem[];
 };

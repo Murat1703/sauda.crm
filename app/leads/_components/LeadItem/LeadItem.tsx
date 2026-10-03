@@ -19,8 +19,6 @@ export const formatDateTime = (date: string) => {
 };
 
 export default function LeadItem({lead}:LeadItemProps){
-
-    console.log(lead)
     return(
         <CardItem>
             <div className={cls.leadItemInfo}>
