@@ -1,0 +1,23 @@
+
+.tabItem:nth-child(1){
+    border-radius: 15px 0 0 15px;
+}
+.tabItem{
+    display: flex;
+    padding: 9px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex: 1 0 0;
+    border-radius: 0 15px 15px 0;
+    border-top: 1px solid var(--border-low, rgba(0, 0, 0, 0.16));
+    border-right: 1px solid var(--border-low, rgba(0, 0, 0, 0.16));
+    border-bottom: 1px solid var(--border-low, rgba(0, 0, 0, 0.16));
+    background: var(--bg-primary, #FFF);
+    color: #202121;
+}
+
+.tabItemActive{
+    background: var(--bg-contrast, #202121);
+    color:#fff;
+}

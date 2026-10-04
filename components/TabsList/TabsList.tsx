@@ -5,7 +5,7 @@ import { TabItemProps } from './TabItem/TabItem'
 type TabsListProps = {
     tabs: TabItemProps[],
     activeTab: string,
-    onChange?: (value: string) => void
+    onChange: (value: string) => void
 }
 
 export default function TabsList({tabs, onChange, activeTab}: TabsListProps){

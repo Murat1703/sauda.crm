@@ -103,3 +103,96 @@
     gap: 16px;
     align-self: stretch;
 }
+.leadType{
+    display: flex;
+    padding-bottom: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    flex: 1 0 0;
+    border-bottom: 1px solid var(--border-thin, rgba(0, 0, 0, 0.07));
+}
+.leadType > div:nth-child(1){
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: stretch;
+}
+.leadSelectBtn{
+    display: flex;
+    padding: 9px 12px;
+    color: var(--content-primary);
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 15px;
+    border: var(--Border-Divider, 1px) solid var(--border-low, rgba(0, 0, 0, 0.16));
+    background: var(--bg-primary, #FFF);
+}
+.leadType > div:nth-child(2){
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.leadType > div:nth-child(2) > div:nth-child(1){
+    width: 320px;
+}
+.leadType > div:nth-child(2)> div:nth-child(2){
+    width: 184px;
+}
+.deadLineCount{
+    display: flex;
+    padding: 9px 12px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border: var(--Border-Divider, 1px) solid var(--border-low, rgba(0, 0, 0, 0.16));
+    background: var(--text-white);
+    border-radius: 15px;
+}
+.deadLineCount > input{
+    width: 100px;
+    border: none;
+    outline: none;
+}
+.autoRenewal{
+    display: flex;
+    height: 64px;
+    padding-top: 24px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    background: var(--text-white);
+}
+
+.budgetBlock,
+.availybilityBlock{
+    display: flex;
+    padding-bottom: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--border-thin, rgba(0, 0, 0, 0.07));
+}
+.budgetBlock > p,
+.availybilityBlock > p{
+    font-weight: 500;
+    color: var(--content-primary);
+}
+.budgetBlock > div{
+    max-width: 320px;
+}
+.availybilityBlock{
+    border: none;
+}
+.availybilityBlock > div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
