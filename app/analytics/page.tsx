@@ -1,7 +1,14 @@
+import LayoutContainer from "@/components/ui/LayoutContainer"
+import PageTopContainer from "@/components/ui/PageTopContainer"
+import Title from "@/components/ui/Title"
+
+
 export default function AnalitycsPage(){
     return(
-        <div>
-            AnalitycsPage
-        </div>
+        <LayoutContainer>
+            <PageTopContainer>
+                <Title text="Аналитика"/>
+            </PageTopContainer>
+        </LayoutContainer>
     )
 }

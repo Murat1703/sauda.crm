@@ -50,6 +50,9 @@ export {default as ArrowRight } from './ArrowRight'
 export {default as CheckIcon } from './CheckIcon'
 
 export {default as BackIcon } from './BackIcon'
-export {default as RemoveIcon } from './BackIcon'
+export {default as RemoveIcon } from './RemoveIcon'
 
 export {default as MenuIcon } from './MenuIcon'
+export {default as ExcelIcon } from './ExcelIcon'
+
+export {default as RemoveRowIcon } from './RemoveRowIcon'

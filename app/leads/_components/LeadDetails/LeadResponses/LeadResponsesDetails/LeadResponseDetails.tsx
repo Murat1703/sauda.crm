@@ -22,7 +22,6 @@ export default function LeadResponseDetails({leadDetails, details}: LeadResponse
     const handleToggleSwitch = () =>{
         setActive(!active)
     }
-    console.log(details)
     return(
         <div className={cls.leadResponseDetailsContent}>
             <div className={cls.leadResponseDetailItem}>

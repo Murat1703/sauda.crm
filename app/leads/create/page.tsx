@@ -1,9 +1,8 @@
 import { BackIcon } from '@/components/ui/icons'
 import cls from './CreatePage.module.css'
-import Title from '@/components/ui/Title'
 import Link from 'next/link'
 import Button from '@/components/ui/Button'
-import CardInputItemsList from './CardInputItemsList'
+import CardInputItemsList from './_components/CardInputItemsList'
 
 export default function CreateLeadPage(){
     return(

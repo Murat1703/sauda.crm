@@ -2,11 +2,23 @@ import cls from './FormTabList.module.css'
 import type { FormTabItemProps } from './FormTabItem/FormTabItem'
 import FormTabItem from './FormTabItem/FormTabItem'
 
+export type FormTab = {
+  label: string;
+  value: string;
+};
+
+// type FormTabListProps = {
+//     tabs: FormTabItemProps[],
+//     activeTab: string,
+//     onChange: (value:string) => void
+// }
+
 type FormTabListProps = {
-    tabs: FormTabItemProps[],
-    activeTab: string,
-    onChange: (value:string) => void
-}
+  tabs: FormTab[];
+  activeTab: string;
+  onChange: (value: string) => void;
+};
+
 
 export default function FormTabList(
     {tabs, activeTab, onChange}:FormTabListProps

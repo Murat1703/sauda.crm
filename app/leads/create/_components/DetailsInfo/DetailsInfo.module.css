@@ -1,0 +1,41 @@
+.detailsInformation{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.infoInputItem{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    width: 320px;
+}
+.infoInputItem > .top{
+    display: flex;
+    flex: 1 0 0;
+    justify-content: space-between;
+    align-self: stretch;
+}
+.infoInputItem > button{
+    display: flex;
+    padding: 9px 12px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 15px;
+    border: var(--Border-Divider, 1px) solid var(--border-low, rgba(0, 0, 0, 0.16));
+    background: var(--bg-primary, #FFF);
+}
+.infoInputItem > button > span{
+    color: var(--content-primary);
+}
+.infoInputComment{
+    width: 100%;
+}
+.infoInputComment > .top > span{
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--content-secondary);
+}

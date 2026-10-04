@@ -17,9 +17,9 @@ export default function LeadResponses({lead}:LeadResponsesProps){
 
 
     const [isShow, setIsShow] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-    const handleShowResponseDetails = (index)=>{
+    const handleShowResponseDetails = (index:number)=>{
         setIsShow(true);
         setActiveIndex(index)
     }

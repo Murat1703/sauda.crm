@@ -1,0 +1,153 @@
+.purchaseTop{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    flex: 1 0 0 ;
+}
+.purchaseTop > h4{
+    font-family: var(--font-title), sans-serif;
+    color: var(--content-primary);
+    letter-spacing: .2px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+.purchaseTop > div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
+.importBlock{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
+.importBlock > div > p{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: right; /* 114.286% */
+}
+.importBlock > div > p:nth-child(1){
+    color: var(--content-secondary, #858988);
+}
+.importBlock > div > p:nth-child(2){
+    text-decoration-line: underline;
+}
+.tableWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+.tableWrapper > table{
+    width: 100%;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 1px solid var(--border-thin, rgba(0, 0, 0, 0.07));
+    background: var(--bg-primary, #FFF);
+    border-collapse: collapse;
+}
+.table > thead{
+    align-self: stretch;
+    width: 100%;
+}
+.table > thead > tr{
+    align-self: stretch;
+    flex: 1 0 0;
+    background: var(--bg-secondary-light, #EDEEEB);
+    height: 32px;
+}
+.table > thead > tr th{
+    padding: 0 12px;
+    align-items: center;
+    text-align: left;
+    gap: 4px;
+    align-self: stretch;
+    font-size: 11px;
+    line-height: 12px;
+    line-height: .4px;
+    letter-spacing: .44px;
+    color: var(--content-secondary, #858988);
+}
+.table > thead > tr th:nth-child(1){
+    width: 40px;
+}
+.table > thead > tr th:nth-child(2){
+    width: 285px;
+}
+.table > thead > tr  th:nth-child(4){
+    width: 285px;
+}
+.table > thead > tr  th:nth-child(6){
+    width: 128px;
+}
+.tableWrapper > button{
+    width: fit-content;
+}
+.tableWrapper > button > svg path{
+    fill: var(--content-primary);
+}
+.tableWrapper > button > span{
+    color: var(--content-primary);
+}
+.table > tbody > tr{
+    height: 48px;
+}
+.table > tbody > tr > td{
+    padding: 0 12px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--content-primary);
+}
+.table > tbody > tr > td > input{
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 16px;
+    align-self: stretch;
+    width: 100%;
+}
+.table > tbody > tr > td:nth-child(2){
+    width: 284px;
+}
+.table > tbody > tr > td:nth-child(4){
+    width: 284px;
+}
+.table > tbody > tr > td:nth-child(6){
+    width: 128px;
+}
+.unitsBtn{
+    display: flex;
+    padding: 8px 12px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+    border-radius: 11px;
+    border: var(--Border-Divider, 1px) solid var(--border-low, rgba(0, 0, 0, 0.16));
+    background: var(--bg-primary, #FFF);
+}
+.unitsBtn > span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--content-primary);
+}
+.cancelBtn{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+/* .table > tbody > tr > td:nth-child(6) */

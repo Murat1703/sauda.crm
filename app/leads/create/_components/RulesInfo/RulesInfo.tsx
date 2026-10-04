@@ -1,17 +1,16 @@
 'use client'
+
+import cls from './RulesInfo.module.css'
 import CardInputsItem from '@/components/CardInputsItem'
-import cls from './CardInputItemsList.module.css'
-import Input from '@/components/ui/Input'
 import InputLabel from '@/components/ui/InputLabel'
-import RemoveIcon from '@/components/ui/icons/RemoveIcon'
-import { ArrowIcon, MenuIcon } from '@/components/ui/icons'
-import FormTabList from '@/components/FormTabList'
-import { act, useState } from 'react'
+import { ArrowIcon } from '@/components/ui/icons'
 import Switch from '@/components/Switch'
+import { useState } from 'react'
+import FormTabList from '@/components/FormTabList'
 
-export default function CardInputItemsList(){
+export default function RulesInfo(){
 
-    const tabs= [
+    const rulesTabs= [
         {
             label: "В опред. день",
             value: "day"
@@ -54,73 +53,7 @@ export default function CardInputItemsList(){
         setIsAvaylibility(!isAvailybility)
     }
 
-
     return(
-        <div className={cls.cardsList}>
-            <CardInputsItem>
-                <h4>Основная информация</h4>
-                <div className={cls.infoContent}>
-                    <div className={cls.infoInputItem}>
-                        <div className={cls.top}>
-                            <InputLabel>
-                                <span>Наименование заявки</span>
-                                <span>*</span>
-                            </InputLabel>
-                            <span>0/100</span>
-
-                        </div>
-                        <Input placeholder='Например: Пополнение материалов и инструментов на объекте'/>
-                    </div>
-                    <div className={cls.infoInputItem}>
-                        <div className={cls.top}>
-                            <InputLabel>
-                                <span>Категории</span>
-                                <span>*</span>
-                            </InputLabel>
-                            <button>Очистить</button>
-                        </div>
-                        <div className={cls.categories}>
-                            <div className={cls.categoriesContent}>
-                                <button className={cls.categoryItem}>
-                                    <span>Крпежные изделия</span>
-                                    <RemoveIcon />
-                                </button>
-                                <div>
-                                    <span>Выберите категории</span>
-                                </div>
-                            </div>
-                            <button className={cls.categoryItemsBtn}>
-                                <MenuIcon />
-                                <span>Меню</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div className={cls.infoObjectItem}>
-                        <div className={cls.infoInputItem}>
-                            <div className={cls.top}>
-                                <InputLabel>
-                                    <span>Объект</span>
-                                    <span>*</span>
-                                </InputLabel>
-                            </div>
-                            <button className={cls.objectsListBtn}>
-                                <span>ЖК Hayat Meliora</span>
-                                <ArrowIcon />
-                            </button>
-                        </div>
-                        <div className={cls.infoInputItem}>
-                            <div className={cls.top}>
-                                <InputLabel>
-                                    <span>Дополнительно о объекте</span>
-                                    <span></span>
-                                </InputLabel>
-                            </div>
-                            <Input placeholder='Очередь, блок, №склада'/>
-                        </div>
-
-                    </div>
-                </div>
-            </CardInputsItem>
             <CardInputsItem>
                 <h4>Правила проведения закупки</h4>
                 <div className={cls.rulesContent}>
@@ -145,7 +78,7 @@ export default function CardInputItemsList(){
                                         <span>*</span>
                                     </InputLabel>
                                 </div>
-                                <FormTabList activeTab={isActive} tabs={tabs} onChange={handleChange}/>
+                                <FormTabList activeTab={isActive} tabs={rulesTabs} onChange={handleChange}/>
                             </div>
                             <div className={cls.infoInputItem}>
                                 <div className={cls.top}>
@@ -178,6 +111,5 @@ export default function CardInputItemsList(){
                     </div>
                 </div>
             </CardInputsItem>
-        </div>
     )
 }

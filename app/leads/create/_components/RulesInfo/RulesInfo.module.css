@@ -1,17 +1,3 @@
-.cardsList{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-bottom: 24px;
-    align-self: stretch;
-}
-.infoContent{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-self: stretch;
-    align-items: flex-start;
-}
 .infoInputItem{
     display: flex;
     flex-direction: column;
@@ -19,83 +5,6 @@
     gap: 8px;
     align-self: stretch;
 }
-.infoInputItem > .top{
-    display: flex;
-    align-items: center;
-    align-self: stretch;
-    justify-content: space-between;
-}
-.infoInputItem > .top > span, 
-.infoInputItem > .top > button{
-    font-size: 14px;
-    line-height: 16px;
-    color: #858988;
-}
-.categories{
-    display: flex;
-    padding: 7px 12px;
-    align-items: center;
-    gap: 6px;
-    align-self: stretch;
-    border-radius: 15px;
-    border: var(--Border-Divider, 1px) solid var(--border-low, rgba(0, 0, 0, 0.16));
-    background: var(--bg-primary, #FFF);
-}
-.categoriesContent{
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex: 1 0 0;
-}
-.categoryItem{
-    display: flex;
-    padding: 8px 12px;
-    align-items: center;
-    gap: 8px;
-    border-radius: 10px;
-    background: var(--bg-secondary-light, #EDEEEB);
-}
-.categoryItem > span{
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--content-primary);
-}
-.categoriesContent > div > span{
-    color: rgba(22, 23, 23, 0.30);
-}
-.categoryItemsBtn{
-    display: flex;
-    padding: 8px 12px;
-    align-items: center;
-    gap: 4px;
-    border-radius: 11px;
-    background: var(--Bg-Secondary, #E3E5E2);
-    color: var(--content-primary);
-}
-.infoObjectItem{
-    display: flex;
-    align-self: stretch;
-    align-items: center;
-    gap: 16px;
-}
-.infoObjectItem > div:nth-child(1){
-    width: 320px;
-}
-.infoObjectItem > div:nth-child(2){
-    flex: 1 0 0;
-}
-.objectsListBtn{
-    display: flex;
-    padding: 9px 12px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-    border-radius: 15px;
-    border: var(--Border-Divider, 1px) solid var(--border-low, rgba(0, 0, 0, 0.16));
-    color: var(--content-primary);
-    background: var(--bg-primary, #FFF);
-}
-
 .rulesContent{
     display: flex;
     flex-direction: column;
