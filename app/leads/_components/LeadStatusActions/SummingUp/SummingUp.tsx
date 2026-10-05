@@ -17,12 +17,22 @@ export default function SummingUp({lead}: SummingUpProps){
 
     const [showDetails, setShowDetails] = useState(false)
 
+
     const handleShowDetails = ()=>{
-        setShowDetails(true)
+        setShowDetails(true);
     }
     const handleCloseDetails = ()=>{
-        setShowDetails(false)
+        setShowDetails(false);
+        setShowActiveTab("")
     }
+
+    const [showActiveTab, setShowActiveTab] = useState('')
+
+    const handleChangeTab = (value:string) =>{
+        setShowActiveTab(value)
+    }
+
+
 
     return(
         <>
@@ -41,10 +51,10 @@ export default function SummingUp({lead}: SummingUpProps){
                 </div>
             </div>
             <div className={cls.summingUpButtonsList}>
-                <CardActionButton cardActionType='Заявка' onClick={handleShowDetails}>
+                <CardActionButton cardActionType='Заявка' onClick={()=>{handleChangeTab('details'); handleShowDetails()}}>
                     <ShowMoreIcon />
                 </CardActionButton>
-                <CardActionButton cardActionType='Отклики'>
+                <CardActionButton cardActionType='Отклики' onClick={()=>{handleChangeTab('responses'); handleShowDetails()}}>
                     < UsersIcon />
                 </CardActionButton>
                 <CardActionButton cardActionType='Сравнение'>
@@ -52,7 +62,7 @@ export default function SummingUp({lead}: SummingUpProps){
                 </CardActionButton>
             </div>
         </div>
-        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        {(showActiveTab && showDetails) && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
         </>
     )
 }

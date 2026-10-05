@@ -12,7 +12,7 @@ type LeadItemProps = {
 
 export default function LeadItem({lead}:LeadItemProps){
     return(
-        <CardItem>
+        <CardItem >
             <div className={cls.leadItemInfo}>
                 <div className={cls.leadName}>
                     <div className={cls.leadNameTitle}>

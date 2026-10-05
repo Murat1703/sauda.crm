@@ -14,14 +14,22 @@ type CollectingResponsesProps={
 
 export default function CollectingResponsesActions({lead}: CollectingResponsesProps) {
 
-    const [showDetails, setShowDetails] = useState(false)
+    const [showDetails, setShowDetails] = useState(false);
 
     const handleShowDetails = ()=>{
-        setShowDetails(true)
+        setShowDetails(true);
     }
     const handleCloseDetails = ()=>{
-        setShowDetails(false)
+        setShowDetails(false);
+        setShowActiveTab("")
     }
+
+    const [showActiveTab, setShowActiveTab] = useState('')
+
+    const handleChangeTab = (value:string) =>{
+        setShowActiveTab(value)
+    }
+
     return(
         <>
         <div className={cls.collectingResponsesContainer}>
@@ -48,10 +56,10 @@ export default function CollectingResponsesActions({lead}: CollectingResponsesPr
                 </div>
             </div>
             <div className={cls.collectingResponsesAction}>
-                <CardActionButton cardActionType={"Отклики"} onClick={handleShowDetails}>
+                <CardActionButton cardActionType={"Заявка"} onClick={()=>{handleChangeTab('details'); handleShowDetails()}}>
                     <ShowMoreIcon />
                 </CardActionButton>
-                <CardActionButton cardActionType={"Отклики"}>
+                <CardActionButton cardActionType={"Отклики"} onClick={()=>{handleChangeTab('responses'); handleShowDetails()}}>
                     <UsersIcon />
                 </CardActionButton>
                 <CardActionButton cardActionType={"Сравнение"}>
@@ -59,7 +67,7 @@ export default function CollectingResponsesActions({lead}: CollectingResponsesPr
                 </CardActionButton>
             </div>
         </div>
-        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        {(showDetails && showActiveTab) && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
         </>
     )
 }       

@@ -13,7 +13,9 @@ import LeadResponses from "./LeadResponses"
 
 type LeadDetailsprops = {
     lead: Lead,
-    onClose: ()=>void
+    onClose: ()=>void,
+    showActiveTab: string,
+    changeTab: (value:string)=>void
 }
 
 const tabsData = [
@@ -32,12 +34,15 @@ const tabsData = [
 ]
 
 
-export default function LeadDetails({lead, onClose}:LeadDetailsprops){
+export default function LeadDetails({lead, onClose, showActiveTab, changeTab}:LeadDetailsprops){
 
-    const [activeTab, setActiveTab] = useState("details");
+    console.log(showActiveTab)
+
+    const [activeTab, setActiveTab] = useState(showActiveTab);
 
     const handleChange = (value: string) => {
         setActiveTab(value);
+        changeTab(value)
     };
 
     return(
@@ -50,7 +55,7 @@ export default function LeadDetails({lead, onClose}:LeadDetailsprops){
                     </CardActionButton>
                 </div>
                 <div className={cls.leadDetailsContentContainer}>
-                    <TabsList tabs={tabsData} onChange={handleChange} activeTab={activeTab} />
+                    <TabsList tabs={tabsData} onChange={handleChange} activeTab={showActiveTab} />
                     <div className={cls.leadDetailsContentBody}>
                         {activeTab == "details" && <LeadInfo lead={lead}/>}
                         {activeTab == "views" && <LeadViews lead={lead}/>}

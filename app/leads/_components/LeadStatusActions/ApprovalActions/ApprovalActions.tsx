@@ -18,10 +18,18 @@ export default function ApprovalActions({lead}: ApprovalActionsProps) {
     const [showDetails, setShowDetails] = useState(false)
 
     const handleShowDetails = ()=>{
-        setShowDetails(true)
+        setShowDetails(true);
+        setShowActiveTab('details')
     }
     const handleCloseDetails = ()=>{
-        setShowDetails(false)
+        setShowDetails(false);
+        setShowActiveTab('')
+    }
+
+    const [showActiveTab, setShowActiveTab] = useState('')
+
+    const handleChangeTab = (value:string) =>{
+        setShowActiveTab(value)
     }
  
     return(
@@ -51,7 +59,7 @@ export default function ApprovalActions({lead}: ApprovalActionsProps) {
                 </CardActionButton>
             </div>
         </div>
-        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
         </>
     )
 }

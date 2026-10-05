@@ -18,18 +18,26 @@ export default function DealApproval({lead}:DealApprovalProps){
     const [showDetails, setShowDetails] = useState(false)
 
     const handleShowDetails = ()=>{
-        setShowDetails(true)
+        setShowDetails(true);
     }
     const handleCloseDetails = ()=>{
-        setShowDetails(false)
+        setShowDetails(false);
+        setShowActiveTab("")
     }
+
+    const [showActiveTab, setShowActiveTab] = useState('')
+
+    const handleChangeTab = (value:string) =>{
+        setShowActiveTab(value)
+    }
+
 
     return(
         <>
         <div className={cls.dealApprovalContainer}>
             <div className={cls.top}>
                 <Badge type={'status'} text='Согласование сделки'></Badge>
-                <CardActionButton cardActionType={"Заявка"} onClick={handleShowDetails}>
+                <CardActionButton cardActionType={"Заявка"} onClick={()=>{handleChangeTab('details'); handleShowDetails()}}>
                     <ShowMoreIcon />
                 </CardActionButton>
             </div>
@@ -46,7 +54,7 @@ export default function DealApproval({lead}:DealApprovalProps){
                 <p>Перейти к сделке</p>
             </Button>
         </div>
-        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        {(showActiveTab && showDetails) && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
         </>
     )
 }

@@ -17,18 +17,26 @@ export default function CompletedActions({lead}: actionsProps){
     const [showDetails, setShowDetails] = useState(false)
 
     const handleShowDetails = ()=>{
-        setShowDetails(true)
+        setShowDetails(true);
     }
     const handleCloseDetails = ()=>{
-        setShowDetails(false)
+        setShowDetails(false);
+        setShowActiveTab("")
     }
+
+    const [showActiveTab, setShowActiveTab] = useState('')
+
+    const handleChangeTab = (value:string) =>{
+        setShowActiveTab(value)
+    }
+
     return(
         <>
         <div className={cls.completedContainer}>
             <div className={cls.completedContent}>
                 <div className={cls.top}>
                     <Badge type='status' text='Закрыта'/>
-                    <CardActionButton cardActionType='Заявка' onClick={handleShowDetails}>
+                    <CardActionButton cardActionType='Заявка' onClick={()=>{handleChangeTab('details'); handleShowDetails()}}>
                         <ShowMoreIcon />
                     </CardActionButton>
                 </div>
@@ -45,7 +53,7 @@ export default function CompletedActions({lead}: actionsProps){
                 </Button>
             </div>
         </div>
-        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        {(showDetails && showActiveTab) && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
         </>
     )
 }
