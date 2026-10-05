@@ -1,8 +1,12 @@
+'use client'
+
 import cls from './SummingUp.module.css'
 import type {Lead} from '../../../types';
 import Badge from '@/components/ui/Badge';
 import CardActionButton from '@/components/CardActionButton';
 import { CompareIcon, ShowMoreIcon, UsersIcon } from '@/components/ui/icons';
+import { useState } from 'react';
+import LeadDetails from '../../LeadDetails';
 
 
 type SummingUpProps = {
@@ -10,7 +14,18 @@ type SummingUpProps = {
 }
 
 export default function SummingUp({lead}: SummingUpProps){
+
+    const [showDetails, setShowDetails] = useState(false)
+
+    const handleShowDetails = ()=>{
+        setShowDetails(true)
+    }
+    const handleCloseDetails = ()=>{
+        setShowDetails(false)
+    }
+
     return(
+        <>
         <div className={cls.summingUpContainer}>
             <div className={cls.summingUpContent}>
                 <Badge type={'status'} text={"Подведение итогов"}/>
@@ -26,7 +41,7 @@ export default function SummingUp({lead}: SummingUpProps){
                 </div>
             </div>
             <div className={cls.summingUpButtonsList}>
-                <CardActionButton cardActionType='Заявка'>
+                <CardActionButton cardActionType='Заявка' onClick={handleShowDetails}>
                     <ShowMoreIcon />
                 </CardActionButton>
                 <CardActionButton cardActionType='Отклики'>
@@ -37,5 +52,7 @@ export default function SummingUp({lead}: SummingUpProps){
                 </CardActionButton>
             </div>
         </div>
+        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        </>
     )
 }

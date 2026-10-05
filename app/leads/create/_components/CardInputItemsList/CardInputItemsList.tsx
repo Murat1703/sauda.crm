@@ -4,6 +4,7 @@ import MainInfo from '../MainInfo'
 import RulesInfo from '../RulesInfo'
 import DetailsInfo from '../DetailsInfo'
 import PurchaseInfo from '../PurchaseInfo'
+import ApprovalInfo from '../ApprovalInfo'
 
 export default function CardInputItemsList(){
     return(
@@ -12,6 +13,7 @@ export default function CardInputItemsList(){
             <RulesInfo />
             <DetailsInfo />
             <PurchaseInfo />
+            <ApprovalInfo />
         </div>
     )
 }

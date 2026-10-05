@@ -56,3 +56,4 @@ export {default as MenuIcon } from './MenuIcon'
 export {default as ExcelIcon } from './ExcelIcon'
 
 export {default as RemoveRowIcon } from './RemoveRowIcon'
+export {default as GreenApprovedIcon } from './GreenApprovedIcon'

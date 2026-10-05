@@ -1,20 +1,35 @@
+'use state'
+
 import cls from './DealApproval.module.css'
 import type {Lead} from '../../../types'
 import Badge from '@/components/ui/Badge'
 import CardActionButton from '@/components/CardActionButton'
 import { DealsIcon, ShowMoreIcon } from '@/components/ui/icons'
 import Button from '@/components/ui/Button'
+import { useState } from 'react'
+import LeadDetails from '../../LeadDetails'
 
 type DealApprovalProps = {
     lead: Lead
 }
 
 export default function DealApproval({lead}:DealApprovalProps){
+
+    const [showDetails, setShowDetails] = useState(false)
+
+    const handleShowDetails = ()=>{
+        setShowDetails(true)
+    }
+    const handleCloseDetails = ()=>{
+        setShowDetails(false)
+    }
+
     return(
+        <>
         <div className={cls.dealApprovalContainer}>
             <div className={cls.top}>
                 <Badge type={'status'} text='Согласование сделки'></Badge>
-                <CardActionButton cardActionType={"Заявка"}>
+                <CardActionButton cardActionType={"Заявка"} onClick={handleShowDetails}>
                     <ShowMoreIcon />
                 </CardActionButton>
             </div>
@@ -31,5 +46,7 @@ export default function DealApproval({lead}:DealApprovalProps){
                 <p>Перейти к сделке</p>
             </Button>
         </div>
+        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        </>
     )
 }

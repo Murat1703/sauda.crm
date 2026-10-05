@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html 
-      lang="en" 
-      className={``}
+      lang="ru" 
       cz-shortcut-listen="true"
     >
       <body>

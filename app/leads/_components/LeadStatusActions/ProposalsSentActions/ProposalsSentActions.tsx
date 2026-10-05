@@ -1,8 +1,12 @@
+'use client'
+
 import Badge from '@/components/ui/Badge'
 import cls from './ProposalsSentActions.module.css'
 import type {Lead} from '../../../types';
 import CardActionButton from '@/components/CardActionButton';
 import { CompareIcon, ShowMoreIcon, UsersIcon } from '@/components/ui/icons';
+import { useState } from 'react';
+import LeadDetails from '../../LeadDetails';
 
 type props = {
     lead: Lead
@@ -10,7 +14,19 @@ type props = {
 
 
 export default function ProposalsSentActions({lead}: props){
+
+    const [showDetails, setShowDetails] = useState(false)
+
+    const handleShowDetails = ()=>{
+        setShowDetails(true)
+    }
+    const handleCloseDetails = ()=>{
+        setShowDetails(false)
+    }
+
+
     return(
+        <>
         <div className={cls.proposalsSentContainer}>
             <div className={cls.proposalsSentContent}>
                 <Badge type='status' text="Отправлены предложения"/>
@@ -30,7 +46,7 @@ export default function ProposalsSentActions({lead}: props){
                 </div>
             </div>
             <div className={cls.proposalsButtonsList}>
-                <CardActionButton cardActionType={"Заявка"}>
+                <CardActionButton cardActionType={"Заявка"} onClick={handleShowDetails}>
                     <ShowMoreIcon />
                 </CardActionButton>
                 <CardActionButton cardActionType={"Отклики"}>
@@ -40,6 +56,9 @@ export default function ProposalsSentActions({lead}: props){
                     <CompareIcon />
                 </CardActionButton>
             </div>
+
         </div>
+        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        </>
     )
 }

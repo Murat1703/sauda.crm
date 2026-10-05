@@ -5,7 +5,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    align-self: stretch;
+    align-self: flex-start;
+    position: sticky;
+    height: calc(100dvh - 84px);
+    top: 87px;
 }
 .sideBar > nav{
     display: flex;

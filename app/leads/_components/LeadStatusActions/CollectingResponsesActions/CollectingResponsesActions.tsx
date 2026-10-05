@@ -1,8 +1,11 @@
+'use state'
 import Badge from '@/components/ui/Badge'
 import cls from './CollectingResponsesActions.module.css'
 import type {Lead} from '../../../types';
 import CardActionButton from '@/components/CardActionButton';
-import { CompareIcon, UsersIcon } from '@/components/ui/icons';
+import { CompareIcon, ShowMoreIcon, UsersIcon } from '@/components/ui/icons';
+import { useState } from 'react';
+import LeadDetails from '../../LeadDetails';
 
 type CollectingResponsesProps={
     lead: Lead
@@ -10,7 +13,17 @@ type CollectingResponsesProps={
 
 
 export default function CollectingResponsesActions({lead}: CollectingResponsesProps) {
+
+    const [showDetails, setShowDetails] = useState(false)
+
+    const handleShowDetails = ()=>{
+        setShowDetails(true)
+    }
+    const handleCloseDetails = ()=>{
+        setShowDetails(false)
+    }
     return(
+        <>
         <div className={cls.collectingResponsesContainer}>
             <div className={cls.collectingResponsesContent}>
                 <Badge type={'status'} text={'Идет прием откликов'} />
@@ -35,6 +48,9 @@ export default function CollectingResponsesActions({lead}: CollectingResponsesPr
                 </div>
             </div>
             <div className={cls.collectingResponsesAction}>
+                <CardActionButton cardActionType={"Отклики"} onClick={handleShowDetails}>
+                    <ShowMoreIcon />
+                </CardActionButton>
                 <CardActionButton cardActionType={"Отклики"}>
                     <UsersIcon />
                 </CardActionButton>
@@ -43,5 +59,7 @@ export default function CollectingResponsesActions({lead}: CollectingResponsesPr
                 </CardActionButton>
             </div>
         </div>
+        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
+        </>
     )
 }       

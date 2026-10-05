@@ -4,12 +4,11 @@ import cls from './LeadItem.module.css'
 import Badge from "@/components/ui/Badge";
 import LeadStatusActions from "../LeadStatusActions";
 import { formatDate } from "@/lib/formatDate";
+import { ApprovalRequest } from "@/app/approvals/types";
 
 type LeadItemProps = {
   lead: Lead;
 };
-
-
 
 export default function LeadItem({lead}:LeadItemProps){
     return(

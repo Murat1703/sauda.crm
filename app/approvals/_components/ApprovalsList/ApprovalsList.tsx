@@ -5,6 +5,8 @@ import cls from './ApprovalsList.module.css'
 import { TabItemProps } from '@/components/TabsList/TabItem/TabItem'
 import { useState } from 'react'
 import { ApprovalRequest } from '../../types'
+import LeadItem from '@/app/leads/_components/LeadItem'
+import ApprovalItem from '../ApprovalItem'
 
 type ApprovalsListProps = {
     approvalsList: ApprovalRequest[]
@@ -29,11 +31,12 @@ export default function ApprovalsList({approvalsList}:ApprovalsListProps){
     const handleChange = (value: string) => {
         setActiveTab(value);
     };
-                {console.log(approvalsList)}
+    {console.log(approvalsList)}
 
     return(
         <div className={cls.approvalsList}>
             <TabsList tabs={tabsData} activeTab={activeTab} onChange={handleChange}/>
+            <ApprovalItem />
         </div>
     )
 }
