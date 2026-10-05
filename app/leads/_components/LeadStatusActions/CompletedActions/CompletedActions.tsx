@@ -45,7 +45,7 @@ export default function CompletedActions({lead}: actionsProps){
                 </Button>
             </div>
         </div>
-        <LeadDetails lead={lead} onClose={handleCloseDetails}/>
+        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails}/>}
         </>
     )
 }
