@@ -13,7 +13,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html 
       lang="ru" 
-      cz-shortcut-listen="true"
     >
       <body>
         <Header />

@@ -8,6 +8,8 @@ export type LeadStatus =
   | "completed"
   | "archived";
 
+export type LeadDetailsTab = "details" | "views" | "responses";
+
 export type LeadStatusInfo = {
   value: LeadStatus;
   label: string;

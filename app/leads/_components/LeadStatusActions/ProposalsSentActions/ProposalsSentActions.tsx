@@ -1,5 +1,3 @@
-'use client'
-
 import Badge from '@/components/ui/Badge'
 import cls from './ProposalsSentActions.module.css'
 import type {Lead} from '../../../types';
@@ -7,6 +5,7 @@ import CardActionButton from '@/components/CardActionButton';
 import { CompareIcon, ShowMoreIcon, UsersIcon } from '@/components/ui/icons';
 import { useState } from 'react';
 import LeadDetails from '../../LeadDetails';
+import { useLeadDetails } from '@/hooks/useLeadDetails';
 
 type props = {
     lead: Lead
@@ -15,23 +14,13 @@ type props = {
 
 export default function ProposalsSentActions({lead}: props){
 
-    const [showDetails, setShowDetails] = useState(false)
-
-
-    const handleShowDetails = ()=>{
-        setShowDetails(true);
-    }
-    const handleCloseDetails = ()=>{
-        setShowDetails(false);
-        setShowActiveTab("")
-    }
-
-    const [showActiveTab, setShowActiveTab] = useState('')
-
-    const handleChangeTab = (value:string) =>{
-        setShowActiveTab(value)
-    }
-
+    const {
+        activeTab,
+        isOpen,
+        openDetails,
+        closeDetails,
+        setActiveTab,
+    } = useLeadDetails()
 
 
 
@@ -56,10 +45,10 @@ export default function ProposalsSentActions({lead}: props){
                 </div>
             </div>
             <div className={cls.proposalsButtonsList}>
-                <CardActionButton cardActionType={"Заявка"} onClick={()=>{handleChangeTab('details'); handleShowDetails()}}>
+                <CardActionButton cardActionType={"Заявка"} onClick={()=>{openDetails('details')}}>
                     <ShowMoreIcon />
                 </CardActionButton>
-                <CardActionButton cardActionType={"Отклики"} onClick={()=>{handleChangeTab('responses'); handleShowDetails()}}>
+                <CardActionButton cardActionType={"Отклики"} onClick={()=>{openDetails('responses')}}>
                     <UsersIcon />
                 </CardActionButton>
                 <CardActionButton cardActionType={"Сравнение"}>
@@ -68,7 +57,7 @@ export default function ProposalsSentActions({lead}: props){
             </div>
 
         </div>
-        {(showActiveTab && showDetails) && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
+        {(isOpen && activeTab) && <LeadDetails lead={lead} onClose={closeDetails} showActiveTab={activeTab} changeTab={setActiveTab}/>}
         </>
     )
 }

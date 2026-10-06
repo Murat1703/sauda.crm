@@ -8,6 +8,7 @@ import {LeadStatusLabels} from '../../../_constants/LeadStatusLabels';
 import { ApprovedIcon, ShowMoreIcon } from '@/components/ui/icons';
 import CardActionButton from '@/components/CardActionButton';
 import LeadDetails from '../../LeadDetails';
+import { useLeadDetails } from '@/hooks/useLeadDetails';
 
 type ApprovalActionsProps = {
     lead: Lead;
@@ -15,22 +16,13 @@ type ApprovalActionsProps = {
 
 export default function ApprovalActions({lead}: ApprovalActionsProps) {
 
-    const [showDetails, setShowDetails] = useState(false)
-
-    const handleShowDetails = ()=>{
-        setShowDetails(true);
-        setShowActiveTab('details')
-    }
-    const handleCloseDetails = ()=>{
-        setShowDetails(false);
-        setShowActiveTab('')
-    }
-
-    const [showActiveTab, setShowActiveTab] = useState('')
-
-    const handleChangeTab = (value:string) =>{
-        setShowActiveTab(value)
-    }
+    const {
+        activeTab,
+        isOpen,
+        openDetails,
+        closeDetails,
+        setActiveTab,
+    } = useLeadDetails()
  
     return(
         <>
@@ -54,12 +46,12 @@ export default function ApprovalActions({lead}: ApprovalActionsProps) {
                 </div>
             </div>
             <div className={cls.approvalsMore}>
-                <CardActionButton cardActionType="Заявка" onClick={handleShowDetails}>
+                <CardActionButton cardActionType="Заявка" onClick={()=>openDetails('details')}>
                     <ShowMoreIcon />
                 </CardActionButton>
             </div>
         </div>
-        {showDetails && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
+        {(isOpen && activeTab) && <LeadDetails lead={lead} onClose={closeDetails} showActiveTab={activeTab} changeTab={setActiveTab}/>}
         </>
     )
 }

@@ -7,6 +7,7 @@ import { DealsIcon, ShowMoreIcon } from '@/components/ui/icons'
 import Button from '@/components/ui/Button'
 import { useState } from 'react'
 import LeadDetails from '../../LeadDetails'
+import { useLeadDetails } from '@/hooks/useLeadDetails'
 
 
 type actionsProps = {
@@ -14,21 +15,14 @@ type actionsProps = {
 }
 
 export default function CompletedActions({lead}: actionsProps){
-    const [showDetails, setShowDetails] = useState(false)
 
-    const handleShowDetails = ()=>{
-        setShowDetails(true);
-    }
-    const handleCloseDetails = ()=>{
-        setShowDetails(false);
-        setShowActiveTab("")
-    }
-
-    const [showActiveTab, setShowActiveTab] = useState('')
-
-    const handleChangeTab = (value:string) =>{
-        setShowActiveTab(value)
-    }
+    const {
+        activeTab,
+        isOpen,
+        openDetails,
+        closeDetails,
+        setActiveTab,
+    } = useLeadDetails()
 
     return(
         <>
@@ -36,7 +30,7 @@ export default function CompletedActions({lead}: actionsProps){
             <div className={cls.completedContent}>
                 <div className={cls.top}>
                     <Badge type='status' text='Закрыта'/>
-                    <CardActionButton cardActionType='Заявка' onClick={()=>{handleChangeTab('details'); handleShowDetails()}}>
+                    <CardActionButton cardActionType='Заявка' onClick={()=>{openDetails('details')}}>
                         <ShowMoreIcon />
                     </CardActionButton>
                 </div>
@@ -53,7 +47,7 @@ export default function CompletedActions({lead}: actionsProps){
                 </Button>
             </div>
         </div>
-        {(showDetails && showActiveTab) && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
+        {(isOpen && activeTab) && <LeadDetails lead={lead} onClose={closeDetails} showActiveTab={activeTab} changeTab={setActiveTab}/>}
         </>
     )
 }

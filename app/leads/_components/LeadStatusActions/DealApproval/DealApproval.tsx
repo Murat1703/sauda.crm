@@ -1,13 +1,11 @@
-'use state'
-
 import cls from './DealApproval.module.css'
 import type {Lead} from '../../../types'
 import Badge from '@/components/ui/Badge'
 import CardActionButton from '@/components/CardActionButton'
 import { DealsIcon, ShowMoreIcon } from '@/components/ui/icons'
 import Button from '@/components/ui/Button'
-import { useState } from 'react'
 import LeadDetails from '../../LeadDetails'
+import { useLeadDetails } from '@/hooks/useLeadDetails'
 
 type DealApprovalProps = {
     lead: Lead
@@ -15,21 +13,14 @@ type DealApprovalProps = {
 
 export default function DealApproval({lead}:DealApprovalProps){
 
-    const [showDetails, setShowDetails] = useState(false)
+    const {
+        activeTab,
+        isOpen,
+        openDetails,
+        closeDetails,
+        setActiveTab,
+    } = useLeadDetails()
 
-    const handleShowDetails = ()=>{
-        setShowDetails(true);
-    }
-    const handleCloseDetails = ()=>{
-        setShowDetails(false);
-        setShowActiveTab("")
-    }
-
-    const [showActiveTab, setShowActiveTab] = useState('')
-
-    const handleChangeTab = (value:string) =>{
-        setShowActiveTab(value)
-    }
 
 
     return(
@@ -37,7 +28,7 @@ export default function DealApproval({lead}:DealApprovalProps){
         <div className={cls.dealApprovalContainer}>
             <div className={cls.top}>
                 <Badge type={'status'} text='Согласование сделки'></Badge>
-                <CardActionButton cardActionType={"Заявка"} onClick={()=>{handleChangeTab('details'); handleShowDetails()}}>
+                <CardActionButton cardActionType={"Заявка"} onClick={()=>{openDetails('details')}}>
                     <ShowMoreIcon />
                 </CardActionButton>
             </div>
@@ -54,7 +45,7 @@ export default function DealApproval({lead}:DealApprovalProps){
                 <p>Перейти к сделке</p>
             </Button>
         </div>
-        {(showActiveTab && showDetails) && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
+        {(isOpen && activeTab) && <LeadDetails lead={lead} onClose={closeDetails} showActiveTab={activeTab} changeTab={setActiveTab}/>}
         </>
     )
 }

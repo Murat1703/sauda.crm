@@ -1,4 +1,4 @@
-'use state'
+'use client'
 import Badge from '@/components/ui/Badge'
 import cls from './CollectingResponsesActions.module.css'
 import type {Lead} from '../../../types';
@@ -6,6 +6,7 @@ import CardActionButton from '@/components/CardActionButton';
 import { CompareIcon, ShowMoreIcon, UsersIcon } from '@/components/ui/icons';
 import { useState } from 'react';
 import LeadDetails from '../../LeadDetails';
+import { useLeadDetails } from '@/hooks/useLeadDetails';
 
 type CollectingResponsesProps={
     lead: Lead
@@ -14,21 +15,13 @@ type CollectingResponsesProps={
 
 export default function CollectingResponsesActions({lead}: CollectingResponsesProps) {
 
-    const [showDetails, setShowDetails] = useState(false);
-
-    const handleShowDetails = ()=>{
-        setShowDetails(true);
-    }
-    const handleCloseDetails = ()=>{
-        setShowDetails(false);
-        setShowActiveTab("")
-    }
-
-    const [showActiveTab, setShowActiveTab] = useState('')
-
-    const handleChangeTab = (value:string) =>{
-        setShowActiveTab(value)
-    }
+    const {
+        activeTab,
+        isOpen,
+        openDetails,
+        closeDetails,
+        setActiveTab,
+    } = useLeadDetails()
 
     return(
         <>
@@ -56,10 +49,10 @@ export default function CollectingResponsesActions({lead}: CollectingResponsesPr
                 </div>
             </div>
             <div className={cls.collectingResponsesAction}>
-                <CardActionButton cardActionType={"Заявка"} onClick={()=>{handleChangeTab('details'); handleShowDetails()}}>
+                <CardActionButton cardActionType={"Заявка"} onClick={() => openDetails('details')}>
                     <ShowMoreIcon />
                 </CardActionButton>
-                <CardActionButton cardActionType={"Отклики"} onClick={()=>{handleChangeTab('responses'); handleShowDetails()}}>
+                <CardActionButton cardActionType={"Отклики"} onClick={() => openDetails('responses')}>
                     <UsersIcon />
                 </CardActionButton>
                 <CardActionButton cardActionType={"Сравнение"}>
@@ -67,7 +60,7 @@ export default function CollectingResponsesActions({lead}: CollectingResponsesPr
                 </CardActionButton>
             </div>
         </div>
-        {(showDetails && showActiveTab) && <LeadDetails lead={lead} onClose={handleCloseDetails} showActiveTab={showActiveTab} changeTab={handleChangeTab}/>}
+        {(isOpen && activeTab) && <LeadDetails lead={lead} onClose={closeDetails} showActiveTab={activeTab} changeTab={setActiveTab}/>}
         </>
     )
 }       

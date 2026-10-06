@@ -1,6 +1,6 @@
 'use client'
 
-import { act, useState } from "react"
+import { useState } from "react"
 import CardActionButton from "@/components/CardActionButton"
 import type { Lead } from "../../types"
 import cls from './LeadDetails.module.css'
@@ -10,12 +10,13 @@ import type { TabItemProps } from "@/components/TabsList/TabItem/TabItem"
 import LeadInfo from "./LeadInfo"
 import LeadViews from "./LeadViews"
 import LeadResponses from "./LeadResponses"
+import { LeadDetailsTab } from "../../types"
 
 type LeadDetailsprops = {
     lead: Lead,
     onClose: ()=>void,
     showActiveTab: string,
-    changeTab: (value:string)=>void
+    changeTab: (tab: LeadDetailsTab | null)=>void
 }
 
 const tabsData = [
