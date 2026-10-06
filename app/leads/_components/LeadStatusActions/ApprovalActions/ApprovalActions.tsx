@@ -46,7 +46,7 @@ export default function ApprovalActions({lead}: ApprovalActionsProps) {
                 </div>
             </div>
             <div className={cls.approvalsMore}>
-                <CardActionButton cardActionType="Заявка" onClick={()=>openDetails('details')}>
+                <CardActionButton cardActionType="Заявка" onClick={()=>{ openDetails('details')}}>
                     <ShowMoreIcon />
                 </CardActionButton>
             </div>

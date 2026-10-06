@@ -23,7 +23,7 @@ export default function LeadItem({lead}:LeadItemProps){
 
     return(
         <>
-            <CardItem onClick={()=>openDetails('details')}>
+            <CardItem >
                 <div className={cls.leadItemInfo}>
                     <div className={cls.leadName}>
                         <div className={cls.leadNameTitle}>

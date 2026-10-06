@@ -2,7 +2,7 @@ import cls from './CardItem.module.css'
 
 type CardItemProps = {
     children: React.ReactNode,
-    onClick: ()=>void
+    onClick?: ()=>void
 }
 
 export default function CardItem({children, onClick}:CardItemProps){

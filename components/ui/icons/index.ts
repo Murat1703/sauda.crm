@@ -57,3 +57,6 @@ export {default as ExcelIcon } from './ExcelIcon'
 
 export {default as RemoveRowIcon } from './RemoveRowIcon'
 export {default as GreenApprovedIcon } from './GreenApprovedIcon'
+
+export {default as FilterNewIcon } from './FilterNewIcon'
+export {default as CalendarIcon } from './CalendarIcon'

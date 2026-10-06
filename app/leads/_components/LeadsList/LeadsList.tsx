@@ -5,6 +5,7 @@ import TabsList from '@/components/TabsList'
 import LeadItem from '../LeadItem'
 import type { Lead } from '../../types'
 import type { TabItemProps } from '@/components/TabsList/TabItem/TabItem'
+import FiltersList from '../../../../components/FiltersList'
 
 type LeadsListProps = {
     leads: Lead[];
@@ -48,6 +49,7 @@ export default function LeadsList({leads}:LeadsListProps){
                 onChange={handleChange} 
                 activeTab={activeTab}
             />
+            <FiltersList />
             <div className={cls.leadsListContent}>
                 {leads.map((lead) => (
                     <LeadItem

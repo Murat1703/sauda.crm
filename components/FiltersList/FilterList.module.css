@@ -1,0 +1,17 @@
+.filtersList{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+}
+.filterContainer{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
