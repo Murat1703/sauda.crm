@@ -13,7 +13,7 @@ export default function FilterItem({text, icon: Icon, filterType,count}: FilterP
             {(filterType == 'new' && Icon ) && <Icon />}    
             <div className={cls.textBlock}>
                 <span>{text}</span>
-                {count && <span>{count}</span>}
+                {count !== undefined && <span>{count}</span>}
             </div>       
             
             {(filterType !== 'new' && Icon) && <Icon />}  

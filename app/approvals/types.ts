@@ -9,7 +9,8 @@ export type ApprovalDecision =
   | "rejected";
 
 export type ApprovalType =
-  | "purchase_request";
+  | "purchase_request"
+  | "deal_request";
 
 export type ApprovalUser = {
   id: number;

@@ -1,17 +1,16 @@
-import cls from './ApprovedList.module.css'
 import ApprovalItem from '../ApprovalItem'
 import { ArrowIcon } from '@/components/ui/icons'
 import { ApprovalRequest } from '../../types'
+import cls from './RejectedList.module.css'
 
-type ApprovedListProps = {
-    approved: ApprovalRequest[]
+type RejectedListProps = {
+    rejected: ApprovalRequest[]
 }
 
-export default function ApprovedList({approved}: ApprovedListProps){
+export default function RejectedList({rejected}:RejectedListProps){
     return(
         <>
-            {approved.filter(item => item.type ==="purchase_request").length > 0 
-                && 
+            {rejected.filter(item => item.type ==="purchase_request").length > 0 &&
             <div className={cls.approvalListType}>
                 <div className={cls.top}>
                     <h4>Заявки</h4>
@@ -20,14 +19,13 @@ export default function ApprovedList({approved}: ApprovedListProps){
                     </button>
                 </div>
                 <div className={cls.bottom}>
-                    {approved.filter(item => item.type ==="purchase_request").map((purchaseItem)=>(
+                    {rejected.filter(item => item.type ==="purchase_request").map((purchaseItem)=>(
                         <ApprovalItem key={purchaseItem.id} approvalItem={purchaseItem}/>
                     ))}
                 </div>
             </div>
             }
-            {approved.filter(item => item.type ==="deal_request").length > 0
-            &&
+            {rejected.filter(item => item.type ==="deal_request").length > 0 && 
             <div className={cls.approvalListType}>
                 <div className={cls.top}>
                     <h4>Сделки</h4>
@@ -36,11 +34,12 @@ export default function ApprovedList({approved}: ApprovedListProps){
                     </button>
                 </div>
                 <div className={cls.bottom}>
-                    {approved.filter(item => item.type ==="deal_request").map((purchaseItem)=>(
+                    {rejected.filter(item => item.type ==="deal_request").map((purchaseItem)=>(
                         <ApprovalItem key={purchaseItem.id} approvalItem={purchaseItem}/>
                     ))}
                 </div>
             </div>
+
             }
         </>
     )

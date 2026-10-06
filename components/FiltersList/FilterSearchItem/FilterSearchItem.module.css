@@ -1,0 +1,28 @@
+.filterSearchItem{
+    display: flex;
+    /* width: 360px; */
+    padding: 7px 10px 7px 12px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 14px;
+    background: var(--text-white);
+    cursor: pointer;
+}
+.filterSearchType{
+    display: flex;
+    padding: 2px 8px 2px 0;
+    align-items: center;
+    gap: 8px;
+    border-right: 1px solid var(--border-low, rgba(0, 0, 0, 0.16));
+}
+.filterSearchItem > input{
+    flex: 1 0 0;
+    max-width: 167px;
+    outline: none;
+    border: none;
+}
+.filterSearchItem > svg:last-child path{
+    width: 20px;
+    height: 20px;
+    fill: #858988;
+}

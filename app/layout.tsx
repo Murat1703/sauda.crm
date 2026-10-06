@@ -5,7 +5,7 @@ import SideBar from "@/components/Sidebar";
 
 
 export const metadata: Metadata = {
-  title: "Sauda - Закупки",
+  title: "Sauda - Главная",
   description: "Страница для поставщиков и проведения закупок",
 };
 

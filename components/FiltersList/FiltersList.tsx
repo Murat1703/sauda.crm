@@ -1,6 +1,7 @@
 import FilterItem from './FilterItem'
 import cls from './FilterList.module.css'
 import { ArrowIcon, CalendarIcon, FilterNewIcon } from '@/components/ui/icons'
+import FilterSearchItem from './FilterSearchItem'
 
 export default function FiltersList(){
     return(
@@ -14,7 +15,9 @@ export default function FiltersList(){
                     <FilterItem filterType='byDate' text='Создано' icon={CalendarIcon}/>
                 </div>
             </div>
-            <div className={cls.right}></div>
+            <div className={cls.right}>
+                <FilterSearchItem text='По № заявки'/>
+            </div>
         </div>
     )
 }

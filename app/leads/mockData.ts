@@ -1736,869 +1736,697 @@ export const leadsMock: Lead[] = [
 ];
 
 export const approvalsMock: ApprovalRequest[] = [
-  {
-    id: 1,
-    leadId: 2,
-    number: "№0002915",
-    type: "purchase_request",
+    {
+        id: 1,
+        leadId: 2,
+        number: "№0002915",
+        type: "purchase_request",
 
-    title: "Поставка сантехнического оборудования",
+        title: "Поставка сантехнического оборудования",
 
-    object: "БЦ Meridian",
-    city: "Алматы",
+        object: "БЦ Meridian",
+        city: "Алматы",
 
-    createdAt: "2026-09-04T09:25:00",
-    approvalDeadline: "2026-09-05T18:00:00",
+        createdAt: "2026-09-04T09:25:00",
+        approvalDeadline: "2026-09-05T18:00:00",
 
-    initiator: {
-      id: 1,
-      name: "Баталгазиев Р.В.",
-      position: "Специалист по закупкам",
+        initiator: {
+            id: 1,
+            name: "Баталгазиев Р.В.",
+            position: "Специалист по закупкам",
+        },
+
+        status: "pending",
+        myDecision: "waiting",
+
+        budget: 3_780_000,
+        itemsCount: 12,
+
+        categories: [
+            "Сантехника",
+            "Инженерные сети",
+        ],
+
+        approvers: [
+            {
+                id: 1,
+                name: "Сапамов С.Т.",
+                position: "Кладовщик",
+                status: "approved",
+                decidedAt: "2026-09-04T10:15:00",
+            },
+            {
+                id: 2,
+                name: "Айтуров А.А.",
+                position: "ПТО проекта",
+                status: "waiting",
+            },
+        ],
     },
 
-    status: "pending",
-    myDecision: "waiting",
-
-    budget: 3_780_000,
-    itemsCount: 12,
-
-    categories: [
-      "Сантехника",
-      "Инженерные сети",
-    ],
-
-    approvers: [
-      {
-        id: 1,
-        name: "Сапамов С.Т.",
-        position: "Кладовщик",
-        status: "approved",
-        decidedAt: "2026-09-04T10:15:00",
-      },
-      {
+    {
         id: 2,
-        name: "Айтуров А.А.",
-        position: "ПТО проекта",
-        status: "waiting",
-      },
-      {
+        leadId: 3,
+        number: "№0002914",
+        type: "purchase_request",
+
+        title: "Фасадные конструкции и расходники",
+
+        object: "ЖК Hayat Meliora",
+        city: "Алматы",
+
+        createdAt: "2026-09-04T10:40:00",
+        approvalDeadline: "2026-09-06T18:00:00",
+
+        initiator: {
+            id: 2,
+            name: "Алпыспаев С.С.",
+            position: "Снабженец",
+        },
+
+        status: "pending",
+        myDecision: "waiting",
+
+        budget: 1_550_000,
+        itemsCount: 13,
+
+        categories: [
+            "Металлопрокат",
+            "Фасадная химия",
+        ],
+
+        approvers: [
+            {
+                id: 1,
+                name: "Сапамов С.Т.",
+                position: "Кладовщик",
+                status: "approved",
+                decidedAt: "2026-09-04T12:00:00",
+            },
+            {
+                id: 2,
+                name: "Нурсалимов П.П.",
+                position: "Отдел закупок",
+                status: "waiting",
+            },
+        ],
+    },
+
+    {
         id: 3,
-        name: "Нурсалимов П.П.",
-        position: "Отдел закупок",
-        status: "waiting",
-      },
-    ],
-  },
+        leadId: 4,
+        number: "№0002913",
+        type: "purchase_request",
 
-  {
-    id: 2,
-    leadId: 3,
-    number: "№0002914",
-    type: "purchase_request",
+        title: "Кабельная продукция для жилого комплекса",
 
-    title: "Фасадные конструкции и расходники",
+        object: "ЖК Grand Avenue",
+        city: "Астана",
 
-    object: "ЖК Hayat Meliora",
-    city: "Алматы",
+        createdAt: "2026-09-05T08:30:00",
+        approvalDeadline: "2026-09-07T12:00:00",
 
-    createdAt: "2026-09-04T10:40:00",
-    approvalDeadline: "2026-09-06T18:00:00",
+        initiator: {
+            id: 3,
+            name: "Ибраев Д.К.",
+            position: "Инженер",
+        },
 
-    initiator: {
-      id: 2,
-      name: "Алпыспаев С.С.",
-      position: "Снабженец",
+        status: "pending",
+        myDecision: "waiting",
+
+        budget: 5_200_000,
+        itemsCount: 8,
+
+        categories: [
+            "Электрика",
+            "Кабель",
+        ],
+
+        approvers: [
+            {
+                id: 1,
+                name: "Сериков Б.М.",
+                position: "Руководитель отдела",
+                status: "approved",
+                decidedAt: "2026-09-05T09:10:00",
+            },
+            {
+                id: 2,
+                name: "Мусин Д.А.",
+                position: "Главный инженер",
+                status: "waiting",
+            },
+        ],
     },
 
-    status: "pending",
-    myDecision: "waiting",
+    {
+        id: 4,
+        leadId: 5,
+        number: "№0002912",
+        type: "purchase_request",
 
-    budget: 1_550_000,
-    itemsCount: 13,
+        title: "ТМЦ: фасадные конструкции и материалы",
 
-    categories: [
-      "Металлопрокат",
-      "Фасадная химия",
-      "Металл",
-      "Расходные материалы",
-    ],
+        object: "ЖК North Residence",
+        city: "Астана",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Сапамов С.Т.",
-        position: "Кладовщик",
-        status: "approved",
-        decidedAt: "2026-09-04T12:00:00",
-      },
-      {
-        id: 2,
-        name: "Айтуров А.А.",
-        position: "ПТО проекта",
-        status: "approved",
-        decidedAt: "2026-09-04T14:20:00",
-      },
-      {
-        id: 3,
-        name: "Нурсалимов П.П.",
-        position: "Отдел закупок",
-        status: "waiting",
-      },
-    ],
-  },
+        createdAt: "2026-09-05T10:20:00",
+        approvalDeadline: "2026-09-08T18:00:00",
 
-  {
-    id: 3,
-    leadId: 4,
-    number: "№0002913",
-    type: "purchase_request",
+        initiator: {
+            id: 4,
+            name: "Султанов М.А.",
+            position: "Снабженец",
+        },
 
-    title: "Кабельная продукция для жилого комплекса",
+        status: "canceled",
+        myDecision: "rejected",
 
-    object: "ЖК Grand Avenue",
-    city: "Астана",
+        budget: 6_400_000,
+        itemsCount: 18,
 
-    createdAt: "2026-09-05T08:30:00",
-    approvalDeadline: "2026-09-07T12:00:00",
+        categories: [
+            "Металлопрокат",
+            "Фасадная химия",
+        ],
 
-    initiator: {
-      id: 3,
-      name: "Ибраев Д.К.",
-      position: "Инженер",
+        approvers: [
+            {
+                id: 1,
+                name: "Нуркенов А.М.",
+                position: "Руководитель проекта",
+                status: "rejected",
+                decidedAt: "2026-09-06T11:30:00",
+            },
+            {
+                id: 2,
+                name: "Омаров А.К.",
+                position: "Финансовый директор",
+                status: "waiting",
+            },
+        ],
     },
 
-    status: "pending",
-    myDecision: "waiting",
+    {
+        id: 5,
+        leadId: 10,
+        number: "№0002907",
+        type: "purchase_request",
 
-    budget: 5_200_000,
-    itemsCount: 8,
+        title: "Системы вентиляции паркинга",
 
-    categories: [
-      "Электрика",
-      "Кабель",
-      "Инженерные сети",
-    ],
+        object: "ЖК Central Residence",
+        city: "Алматы",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Сериков Б.М.",
-        position: "Руководитель отдела",
-        status: "approved",
-        decidedAt: "2026-09-05T09:10:00",
-      },
-      {
-        id: 2,
-        name: "Мусин Д.А.",
-        position: "Главный инженер",
-        status: "waiting",
-      },
-    ],
-  },
+        createdAt: "2026-09-06T09:15:00",
+        approvalDeadline: "2026-09-09T18:00:00",
 
-  {
-    id: 4,
-    leadId: 5,
-    number: "№0002912",
-    type: "purchase_request",
+        initiator: {
+            id: 5,
+            name: "Ермеков А.Н.",
+            position: "Инженер проекта",
+        },
 
-    title: "ТМЦ: фасадные конструкции и материалы",
+        status: "pending",
+        myDecision: "waiting",
 
-    object: "ЖК North Residence",
-    city: "Астана",
+        budget: 12_500_000,
+        itemsCount: 6,
 
-    createdAt: "2026-09-05T10:20:00",
-    approvalDeadline: "2026-09-08T18:00:00",
+        categories: [
+            "Вентиляция",
+            "ОВиК",
+        ],
 
-    initiator: {
-      id: 4,
-      name: "Султанов М.А.",
-      position: "Снабженец",
+        approvers: [
+            {
+                id: 1,
+                name: "Тлеубаев М.К.",
+                position: "Главный инженер",
+                status: "approved",
+                decidedAt: "2026-09-06T10:30:00",
+            },
+            {
+                id: 2,
+                name: "Иманбаев Д.С.",
+                position: "Финансовый отдел",
+                status: "waiting",
+            },
+        ],
     },
 
-    status: "pending",
-    myDecision: "waiting",
+    // ============================
+    // DEAL REQUEST
+    // ============================
 
-    budget: 6_400_000,
-    itemsCount: 18,
+    {
+        id: 6,
+        leadId: 20,
+        number: "№0002906",
+        type: "deal_request",
 
-    categories: [
-      "Металлопрокат",
-      "Фасадная химия",
-      "Расходные материалы",
-    ],
+        title: "Согласование сделки на поставку оконных конструкций",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Нуркенов А.М.",
-        position: "Руководитель проекта",
-        status: "waiting",
-      },
-      {
-        id: 2,
-        name: "Касымов Е.Н.",
-        position: "Отдел закупок",
-        status: "waiting",
-      },
-      {
-        id: 3,
-        name: "Омаров А.К.",
-        position: "Финансовый директор",
-        status: "waiting",
-      },
-    ],
-  },
+        object: "ЖК Green Park",
+        city: "Алматы",
 
-  {
-    id: 5,
-    leadId: 10,
-    number: "№0002907",
-    type: "purchase_request",
+        createdAt: "2026-09-03T11:10:00",
+        approvalDeadline: "2026-09-05T18:00:00",
 
-    title: "Системы вентиляции паркинга",
+        initiator: {
+            id: 6,
+            name: "Касымов Е.Н.",
+            position: "Руководитель проекта",
+        },
 
-    object: "ЖК Central Residence",
-    city: "Алматы",
+        status: "pending",
+        myDecision: "waiting",
 
-    createdAt: "2026-09-06T09:15:00",
-    approvalDeadline: "2026-09-09T18:00:00",
+        budget: 9_800_000,
+        itemsCount: 4,
 
-    initiator: {
-      id: 5,
-      name: "Ермеков А.Н.",
-      position: "Инженер проекта",
+        categories: [
+            "Окна",
+            "Алюминиевые конструкции",
+        ],
+
+        approvers: [
+            {
+                id: 1,
+                name: "Омаров А.К.",
+                position: "Финансовый директор",
+                status: "approved",
+                decidedAt: "2026-09-03T14:15:00",
+            },
+            {
+                id: 2,
+                name: "Баталгазиев Р.В.",
+                position: "Отдел закупок",
+                status: "waiting",
+            },
+        ],
     },
 
-    status: "pending",
-    myDecision: "waiting",
+    {
+        id: 7,
+        leadId: 21,
+        number: "№0002905",
+        type: "deal_request",
 
-    budget: 12_500_000,
-    itemsCount: 6,
+        title: "Согласование сделки по системе видеонаблюдения",
 
-    categories: [
-      "Вентиляция",
-      "ОВиК",
-    ],
+        object: "БЦ Capital Tower",
+        city: "Астана",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Тлеубаев М.К.",
-        position: "Главный инженер",
-        status: "approved",
-        decidedAt: "2026-09-06T10:30:00",
-      },
-      {
-        id: 2,
-        name: "Иманбаев Д.С.",
-        position: "Финансовый отдел",
-        status: "waiting",
-      },
-    ],
-  },
+        createdAt: "2026-09-02T09:00:00",
+        approvalDeadline: "2026-09-04T18:00:00",
 
-  // ============================
-  // СОГЛАСОВАНО МНОЙ
-  // ============================
+        initiator: {
+            id: 7,
+            name: "Баталгазиев Р.В.",
+            position: "Специалист по закупкам",
+        },
 
-  {
-    id: 6,
-    leadId: 6,
-    number: "№0002911",
-    type: "purchase_request",
+        status: "canceled",
+        myDecision: "rejected",
 
-    title: "Поставка оконных конструкций",
+        budget: 4_250_000,
+        itemsCount: 9,
 
-    object: "ЖК Green Park",
-    city: "Алматы",
+        categories: [
+            "Слаботочные сети",
+            "Видеонаблюдение",
+        ],
 
-    createdAt: "2026-09-01T11:10:00",
-    approvalDeadline: "2026-09-03T18:00:00",
-
-    initiator: {
-      id: 6,
-      name: "Касымов Е.Н.",
-      position: "Руководитель проекта",
+        approvers: [
+            {
+                id: 1,
+                name: "Айтуров А.А.",
+                position: "ПТО проекта",
+                status: "rejected",
+                decidedAt: "2026-09-03T10:25:00",
+            },
+            {
+                id: 2,
+                name: "Сапамов С.Т.",
+                position: "Кладовщик",
+                status: "waiting",
+            },
+        ],
     },
 
-    status: "approved",
-    myDecision: "approved",
+    {
+        id: 8,
+        leadId: 22,
+        number: "№0002904",
+        type: "deal_request",
 
-    budget: 9_800_000,
-    itemsCount: 4,
+        title: "Согласование договора на фасадные системы",
 
-    categories: [
-      "Окна",
-      "Алюминиевые конструкции",
-    ],
+        object: "ЖК Riverside",
+        city: "Алматы",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Кузнецов М.А.",
-        position: "ПТО проекта",
+        createdAt: "2026-09-01T12:40:00",
+        approvalDeadline: "2026-09-03T18:00:00",
+
+        initiator: {
+            id: 8,
+            name: "Султанов А.Р.",
+            position: "Снабженец",
+        },
+
         status: "approved",
-        decidedAt: "2026-09-01T15:10:00",
-      },
-      {
-        id: 2,
-        name: "Баталгазиев Р.В.",
-        position: "Отдел закупок",
-        status: "approved",
-        decidedAt: "2026-09-01T16:40:00",
-      },
-    ],
-  },
+        myDecision: "approved",
 
-  {
-    id: 7,
-    leadId: 7,
-    number: "№0002910",
-    type: "purchase_request",
+        budget: 8_900_000,
+        itemsCount: 15,
 
-    title: "Поставка и монтаж наружного видеонаблюдения",
+        categories: [
+            "Стальные профили",
+            "Фасадные системы",
+        ],
 
-    object: "БЦ Capital Tower",
-    city: "Астана",
-
-    createdAt: "2026-08-30T09:00:00",
-    approvalDeadline: "2026-09-01T18:00:00",
-
-    initiator: {
-      id: 7,
-      name: "Баталгазиев Р.В.",
-      position: "Специалист по закупкам",
+        approvers: [
+            {
+                id: 1,
+                name: "Тасболатов Д.М.",
+                position: "Руководитель проекта",
+                status: "approved",
+                decidedAt: "2026-09-01T15:20:00",
+            },
+            {
+                id: 2,
+                name: "Омаров А.К.",
+                position: "Финансовый директор",
+                status: "approved",
+                decidedAt: "2026-09-02T11:30:00",
+            },
+        ],
     },
 
-    status: "approved",
-    myDecision: "approved",
+    {
+        id: 9,
+        leadId: 23,
+        number: "№0002903",
+        type: "deal_request",
 
-    budget: 4_250_000,
-    itemsCount: 9,
+        title: "Согласование сделки на отделочные материалы",
 
-    categories: [
-      "Слаботочные сети",
-      "Видеонаблюдение",
-    ],
+        object: "ЖК Apple City",
+        city: "Алматы",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Айтуров А.А.",
-        position: "ПТО проекта",
+        createdAt: "2026-08-31T14:30:00",
+        approvalDeadline: "2026-09-02T18:00:00",
+
+        initiator: {
+            id: 9,
+            name: "Жумабеков К.Т.",
+            position: "Менеджер проекта",
+        },
+
         status: "approved",
-        decidedAt: "2026-08-30T14:25:00",
-      },
-      {
-        id: 2,
-        name: "Сапамов С.Т.",
-        position: "Кладовщик",
-        status: "approved",
-        decidedAt: "2026-08-31T10:50:00",
-      },
-    ],
-  },
+        myDecision: "approved",
 
-  {
-    id: 8,
-    leadId: 8,
-    number: "№0002909",
-    type: "purchase_request",
+        budget: 7_350_000,
+        itemsCount: 11,
 
-    title: "ТМЦ: фасадные системы и материалы",
+        categories: [
+            "Отделочные материалы",
+            "Керамогранит",
+        ],
 
-    object: "ЖК Riverside",
-    city: "Алматы",
-
-    createdAt: "2026-08-28T12:40:00",
-    approvalDeadline: "2026-08-30T18:00:00",
-
-    initiator: {
-      id: 8,
-      name: "Султанов А.Р.",
-      position: "Снабженец",
+        approvers: [
+            {
+                id: 1,
+                name: "Омаров А.К.",
+                position: "Финансовый директор",
+                status: "approved",
+                decidedAt: "2026-09-01T11:10:00",
+            },
+        ],
     },
 
-    status: "approved",
-    myDecision: "approved",
+    {
+        id: 10,
+        leadId: 24,
+        number: "№0002902",
+        type: "deal_request",
 
-    budget: 8_900_000,
-    itemsCount: 15,
+        title: "Согласование сделки на лифтовое оборудование",
 
-    categories: [
-      "Стальные профили",
-      "Инструменты",
-    ],
+        object: "ЖК Avenue Park",
+        city: "Астана",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Тасболатов Д.М.",
-        position: "Руководитель проекта",
-        status: "approved",
-        decidedAt: "2026-08-28T15:20:00",
-      },
-      {
-        id: 2,
-        name: "Иманбаев Д.С.",
-        position: "Финансовый отдел",
-        status: "approved",
-        decidedAt: "2026-08-29T09:15:00",
-      },
-      {
-        id: 3,
-        name: "Омаров А.К.",
-        position: "Финансовый директор",
-        status: "approved",
-        decidedAt: "2026-08-29T11:30:00",
-      },
-    ],
-  },
+        createdAt: "2026-08-30T09:30:00",
+        approvalDeadline: "2026-09-02T18:00:00",
 
-  {
-    id: 9,
-    leadId: 9,
-    number: "№0002908",
-    type: "purchase_request",
+        initiator: {
+            id: 10,
+            name: "Тасболатов Д.М.",
+            position: "Руководитель проекта",
+        },
 
-    title: "Материалы для отделки входных групп",
+        status: "canceled",
+        myDecision: "rejected",
 
-    object: "ЖК Apple City",
-    city: "Алматы",
+        budget: 48_000_000,
+        itemsCount: 4,
 
-    createdAt: "2026-08-27T14:30:00",
-    approvalDeadline: "2026-08-29T18:00:00",
+        categories: [
+            "Лифтовое оборудование",
+            "Инженерные системы",
+        ],
 
-    initiator: {
-      id: 9,
-      name: "Жумабеков К.Т.",
-      position: "Менеджер проекта",
+        approvers: [
+            {
+                id: 1,
+                name: "Омаров А.К.",
+                position: "Финансовый директор",
+                status: "rejected",
+                decidedAt: "2026-08-31T10:20:00",
+            },
+            {
+                id: 2,
+                name: "Нурсалимов П.П.",
+                position: "Отдел закупок",
+                status: "waiting",
+            },
+        ],
     },
 
-    status: "approved",
-    myDecision: "approved",
+    // ============================
+    // PURCHASE REQUEST
+    // ============================
 
-    budget: 7_350_000,
-    itemsCount: 11,
+    {
+        id: 11,
+        leadId: 12,
+        number: "№0002901",
+        type: "purchase_request",
 
-    categories: [
-      "Отделочные материалы",
-      "Керамогранит",
-    ],
+        title: "Закуп лакокрасочных материалов",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Омаров А.К.",
-        position: "Финансовый директор",
+        object: "ЖК Nova City",
+        city: "Алматы",
+
+        createdAt: "2026-08-25T13:20:00",
+        approvalDeadline: "2026-08-27T17:00:00",
+
+        initiator: {
+            id: 11,
+            name: "Сериков Б.М.",
+            position: "Специалист по закупкам",
+        },
+
         status: "approved",
-        decidedAt: "2026-08-28T11:10:00",
-      },
-    ],
-  },
+        myDecision: "approved",
 
-  {
-    id: 10,
-    leadId: 11,
-    number: "№0002906",
-    type: "purchase_request",
+        budget: 980_000,
+        itemsCount: 7,
 
-    title: "Закуп лакокрасочных материалов",
+        categories: [
+            "Краски",
+            "Расходные материалы",
+        ],
 
-    object: "ЖК Nova City",
-    city: "Алматы",
-
-    createdAt: "2026-08-25T13:20:00",
-    approvalDeadline: "2026-08-27T17:00:00",
-
-    initiator: {
-      id: 10,
-      name: "Сериков Б.М.",
-      position: "Специалист по закупкам",
+        approvers: [
+            {
+                id: 1,
+                name: "Касымов Е.Н.",
+                position: "Руководитель проекта",
+                status: "approved",
+                decidedAt: "2026-08-25T16:10:00",
+            },
+        ],
     },
 
-    status: "approved",
-    myDecision: "approved",
+    {
+        id: 12,
+        leadId: 13,
+        number: "№0002900",
+        type: "purchase_request",
 
-    budget: 980_000,
-    itemsCount: 7,
+        title: "Мебель для офиса управляющей компании",
 
-    categories: [
-      "Краски",
-      "Расходные материалы",
-    ],
+        object: "Business Center Prime",
+        city: "Алматы",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Касымов Е.Н.",
-        position: "Руководитель проекта",
+        createdAt: "2026-08-20T11:00:00",
+        approvalDeadline: "2026-08-22T18:00:00",
+
+        initiator: {
+            id: 12,
+            name: "Нуртаев А.М.",
+            position: "Административный отдел",
+        },
+
         status: "approved",
-        decidedAt: "2026-08-25T16:10:00",
-      },
-      {
-        id: 2,
-        name: "Тлеубаев М.К.",
-        position: "Главный инженер",
-        status: "approved",
-        decidedAt: "2026-08-26T09:35:00",
-      },
-    ],
-  },
+        myDecision: "approved",
 
-  {
-    id: 11,
-    leadId: 12,
-    number: "№0002905",
-    type: "purchase_request",
+        budget: 3_100_000,
+        itemsCount: 10,
 
-    title: "Лифтовое оборудование для второй очереди",
+        categories: [
+            "Мебель",
+            "Офис",
+        ],
 
-    object: "ЖК Avenue Park",
-    city: "Астана",
-
-    createdAt: "2026-08-22T09:30:00",
-    approvalDeadline: "2026-08-25T18:00:00",
-
-    initiator: {
-      id: 11,
-      name: "Тасболатов Д.М.",
-      position: "Руководитель проекта",
+        approvers: [
+            {
+                id: 1,
+                name: "Каримов Р.Н.",
+                position: "Административный директор",
+                status: "approved",
+                decidedAt: "2026-08-21T10:30:00",
+            },
+        ],
     },
 
-    status: "approved",
-    myDecision: "approved",
+    {
+        id: 13,
+        leadId: 14,
+        number: "№0002899",
+        type: "purchase_request",
 
-    budget: 48_000_000,
-    itemsCount: 4,
+        title: "Сухие строительные смеси",
 
-    categories: [
-      "Лифтовое оборудование",
-      "Инженерные системы",
-    ],
+        object: "ЖК Alatau Hills",
+        city: "Алматы",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Омаров А.К.",
-        position: "Финансовый директор",
+        createdAt: "2026-08-18T16:15:00",
+        approvalDeadline: "2026-08-20T18:00:00",
+
+        initiator: {
+            id: 13,
+            name: "Рахимов Т.Е.",
+            position: "Снабженец",
+        },
+
         status: "approved",
-        decidedAt: "2026-08-23T10:20:00",
-      },
-      {
-        id: 2,
-        name: "Иманбаев Д.С.",
-        position: "Финансовый отдел",
-        status: "approved",
-        decidedAt: "2026-08-23T14:40:00",
-      },
-      {
-        id: 3,
-        name: "Нурсалимов П.П.",
-        position: "Отдел закупок",
-        status: "approved",
-        decidedAt: "2026-08-24T10:15:00",
-      },
-    ],
-  },
+        myDecision: "approved",
 
-  {
-    id: 12,
-    leadId: 13,
-    number: "№0002904",
-    type: "purchase_request",
+        budget: 2_870_000,
+        itemsCount: 14,
 
-    title: "Мебель для офиса управляющей компании",
+        categories: [
+            "Строительные смеси",
+            "Черновые материалы",
+        ],
 
-    object: "Business Center Prime",
-    city: "Алматы",
-
-    createdAt: "2026-08-20T11:00:00",
-    approvalDeadline: "2026-08-22T18:00:00",
-
-    initiator: {
-      id: 12,
-      name: "Нуртаев А.М.",
-      position: "Административный отдел",
+        approvers: [
+            {
+                id: 1,
+                name: "Сапамов С.Т.",
+                position: "Кладовщик",
+                status: "approved",
+                decidedAt: "2026-08-19T10:15:00",
+            },
+        ],
     },
 
-    status: "approved",
-    myDecision: "approved",
+    {
+        id: 14,
+        leadId: 15,
+        number: "№0002898",
+        type: "purchase_request",
 
-    budget: 3_100_000,
-    itemsCount: 10,
+        title: "Освещение общественных зон",
 
-    categories: [
-      "Мебель",
-      "Офис",
-    ],
+        object: "ЖК Panorama",
+        city: "Алматы",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Омаров А.К.",
-        position: "Финансовый директор",
-        status: "approved",
-        decidedAt: "2026-08-20T16:20:00",
-      },
-      {
-        id: 2,
-        name: "Каримов Р.Н.",
-        position: "Административный директор",
-        status: "approved",
-        decidedAt: "2026-08-21T10:30:00",
-      },
-    ],
-  },
+        createdAt: "2026-08-17T10:10:00",
+        approvalDeadline: "2026-08-19T18:00:00",
 
-  {
-    id: 13,
-    leadId: 14,
-    number: "№0002903",
-    type: "purchase_request",
+        initiator: {
+            id: 14,
+            name: "Каримов Р.Н.",
+            position: "Инженер проекта",
+        },
 
-    title: "Сухие строительные смеси",
+        status: "canceled",
+        myDecision: "rejected",
 
-    object: "ЖК Alatau Hills",
-    city: "Алматы",
+        budget: 4_600_000,
+        itemsCount: 16,
 
-    createdAt: "2026-08-18T16:15:00",
-    approvalDeadline: "2026-08-20T18:00:00",
+        categories: [
+            "Освещение",
+            "Электрика",
+        ],
 
-    initiator: {
-      id: 13,
-      name: "Рахимов Т.Е.",
-      position: "Снабженец",
+        approvers: [
+            {
+                id: 1,
+                name: "Тлеубаев М.К.",
+                position: "Главный инженер",
+                status: "rejected",
+                decidedAt: "2026-08-18T09:45:00",
+            },
+        ],
     },
 
-    status: "approved",
-    myDecision: "approved",
+    {
+        id: 15,
+        leadId: 16,
+        number: "№0002897",
+        type: "purchase_request",
 
-    budget: 2_870_000,
-    itemsCount: 14,
+        title: "Материалы для устройства кровли",
 
-    categories: [
-      "Строительные смеси",
-      "Черновые материалы",
-    ],
+        object: "ЖК Mountain View",
+        city: "Алматы",
 
-    approvers: [
-      {
-        id: 1,
-        name: "Сапамов С.Т.",
-        position: "Кладовщик",
+        createdAt: "2026-08-15T09:20:00",
+        approvalDeadline: "2026-08-17T18:00:00",
+
+        initiator: {
+            id: 15,
+            name: "Абдрахманов А.С.",
+            position: "Снабженец",
+        },
+
         status: "approved",
-        decidedAt: "2026-08-19T10:15:00",
-      },
-      {
-        id: 2,
-        name: "Айтуров А.А.",
-        position: "ПТО проекта",
-        status: "approved",
-        decidedAt: "2026-08-19T13:40:00",
-      },
-    ],
-  },
+        myDecision: "approved",
 
-  {
-    id: 14,
-    leadId: 15,
-    number: "№0002902",
-    type: "purchase_request",
+        budget: 5_900_000,
+        itemsCount: 12,
 
-    title: "Освещение общественных зон",
+        categories: [
+            "Кровля",
+            "Металлопрокат",
+        ],
 
-    object: "ЖК Panorama",
-    city: "Алматы",
-
-    createdAt: "2026-08-17T10:10:00",
-    approvalDeadline: "2026-08-19T18:00:00",
-
-    initiator: {
-      id: 14,
-      name: "Каримов Р.Н.",
-      position: "Инженер проекта",
+        approvers: [
+            {
+                id: 1,
+                name: "Касымов Е.Н.",
+                position: "Руководитель проекта",
+                status: "approved",
+                decidedAt: "2026-08-15T14:45:00",
+            },
+        ],
     },
-
-    status: "approved",
-    myDecision: "approved",
-
-    budget: 4_600_000,
-    itemsCount: 16,
-
-    categories: [
-      "Освещение",
-      "Электрика",
-      "Дизайн",
-    ],
-
-    approvers: [
-      {
-        id: 1,
-        name: "Тлеубаев М.К.",
-        position: "Главный инженер",
-        status: "approved",
-        decidedAt: "2026-08-17T14:10:00",
-      },
-      {
-        id: 2,
-        name: "Омаров А.К.",
-        position: "Финансовый директор",
-        status: "approved",
-        decidedAt: "2026-08-18T10:30:00",
-      },
-    ],
-  },
-
-  {
-    id: 15,
-    leadId: 16,
-    number: "№0002901",
-    type: "purchase_request",
-
-    title: "Материалы для устройства кровли",
-
-    object: "ЖК Mountain View",
-    city: "Алматы",
-
-    createdAt: "2026-08-15T09:20:00",
-    approvalDeadline: "2026-08-17T18:00:00",
-
-    initiator: {
-      id: 15,
-      name: "Абдрахманов А.С.",
-      position: "Снабженец",
-    },
-
-    status: "approved",
-    myDecision: "approved",
-
-    budget: 5_900_000,
-    itemsCount: 12,
-
-    categories: [
-      "Кровля",
-      "Металлопрокат",
-    ],
-
-    approvers: [
-      {
-        id: 1,
-        name: "Касымов Е.Н.",
-        position: "Руководитель проекта",
-        status: "approved",
-        decidedAt: "2026-08-15T14:45:00",
-      },
-    ],
-  },
-
-  {
-    id: 16,
-    leadId: 17,
-    number: "№0002900",
-    type: "purchase_request",
-
-    title: "Оборудование для системы отопления",
-
-    object: "ЖК Central Park",
-    city: "Астана",
-
-    createdAt: "2026-08-13T13:40:00",
-    approvalDeadline: "2026-08-15T18:00:00",
-
-    initiator: {
-      id: 16,
-      name: "Муратов Н.Б.",
-      position: "Инженер ОВиК",
-    },
-
-    status: "approved",
-    myDecision: "approved",
-
-    budget: 11_400_000,
-    itemsCount: 19,
-
-    categories: [
-      "ОВиК",
-      "Отопление",
-      "Инженерные системы",
-    ],
-
-    approvers: [
-      {
-        id: 1,
-        name: "Тлеубаев М.К.",
-        position: "Главный инженер",
-        status: "approved",
-        decidedAt: "2026-08-14T09:20:00",
-      },
-      {
-        id: 2,
-        name: "Омаров А.К.",
-        position: "Финансовый директор",
-        status: "approved",
-        decidedAt: "2026-08-14T12:35:00",
-      },
-    ],
-  },
-
-  {
-    id: 17,
-    leadId: 18,
-    number: "№0002899",
-    type: "purchase_request",
-
-    title: "Двери и фурнитура для квартир",
-
-    object: "ЖК Hayat Astoria",
-    city: "Алматы",
-
-    createdAt: "2026-08-10T11:25:00",
-    approvalDeadline: "2026-08-12T18:00:00",
-
-    initiator: {
-      id: 17,
-      name: "Алпыспаев А.Е.",
-      position: "Специалист по закупкам",
-    },
-
-    status: "approved",
-    myDecision: "approved",
-
-    budget: 8_750_000,
-    itemsCount: 21,
-
-    categories: [
-      "Двери",
-      "Фурнитура",
-      "Отделочные материалы",
-    ],
-
-    approvers: [
-      {
-        id: 1,
-        name: "Айтуров А.А.",
-        position: "ПТО проекта",
-        status: "approved",
-        decidedAt: "2026-08-10T15:40:00",
-      },
-      {
-        id: 2,
-        name: "Иманбаев Д.С.",
-        position: "Финансовый отдел",
-        status: "approved",
-        decidedAt: "2026-08-11T09:15:00",
-      },
-      {
-        id: 3,
-        name: "Нурсалимов П.П.",
-        position: "Отдел закупок",
-        status: "approved",
-        decidedAt: "2026-08-11T12:30:00",
-      },
-    ],
-  },
-];
-
+]
 
