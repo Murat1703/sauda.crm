@@ -13,3 +13,12 @@
     line-height: 16px;
     color: var(--content-secondary);
 }
+
+.status{
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.pending{
+    background-color: red;
+}

@@ -27,7 +27,7 @@ export default function SummingUp({lead}: SummingUpProps){
         <>
         <div className={cls.summingUpContainer}>
             <div className={cls.summingUpContent}>
-                <Badge type={'status'} text={"Подведение итогов"}/>
+                <Badge type='status' text={"Подведение итогов"}/>
                 <div className={cls.summingDetails}>
                     <div>
                         <span>Отклики</span>

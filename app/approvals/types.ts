@@ -1,7 +1,8 @@
 export type ApprovalStatus =
   | "pending"
   | "approved"
-  | "rejected";
+  | "rejected"
+  | "canceled";
 
 export type ApprovalDecision =
   | "waiting"

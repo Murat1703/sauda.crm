@@ -44,6 +44,12 @@
   --chart-gray: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #DCDDE0;
   --chart-violet: #AC4DFF;
   --font-title: "CoFo Weather";
+  --success-light: #D1F7D2;
+  --success-color: #009466;
+  --warning-light: #fde4a6;
+  --warning-color: #875724;
+  --error-light: #FADEDE;
+  --error-color: #E52E2E;
 }
 
 html {

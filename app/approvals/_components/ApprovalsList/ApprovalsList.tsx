@@ -32,8 +32,7 @@ export default function ApprovalsList({approvalsList}:ApprovalsListProps){
         setActiveTab(value);
     };
 
-
-
+    console.log(approvalsList)
     return(
         <div className={cls.approvalsList}>
             <TabsList tabs={tabsData} activeTab={activeTab} onChange={handleChange}/>

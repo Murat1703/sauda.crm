@@ -27,7 +27,7 @@ export default function DealApproval({lead}:DealApprovalProps){
         <>
         <div className={cls.dealApprovalContainer}>
             <div className={cls.top}>
-                <Badge type={'status'} text='Согласование сделки'></Badge>
+                <Badge type='status' text='Согласование сделки'></Badge>
                 <CardActionButton cardActionType={"Заявка"} onClick={()=>{openDetails('details')}}>
                     <ShowMoreIcon />
                 </CardActionButton>

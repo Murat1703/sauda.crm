@@ -59,3 +59,165 @@
     line-height: 16px; /* 114.286% */
     color: var(--content-secondary);
 }
+.approvedItemDateBlock{
+    display: flex;
+    padding: 0 32px 0 64px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.deadLine{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+.deadLine > span:nth-child(1){
+    color: var(--content-secondary);
+    width: 128px;
+}
+.deadLine > span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+}
+.approvedItemStatusBlock{
+    display: flex;
+    width: 276px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.statusContainer{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+.statusLeft{
+    display: flex;
+    width: 236px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.status{
+
+}
+.pending{
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+.canceled{
+    background: var(--bg-error-light, #FADEDE);
+    color: var(--content-error, #E52E2E);
+}
+
+.approved{
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.approvalPeoples{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+}
+.approvalPeoplesContent{
+    display: flex;
+    align-self: stretch;
+    gap:12px;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style: none;
+}
+.approvalPeoplesContent > li{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    position: relative;
+}
+.approvalPeoplesContent > li::after{
+    content: "";
+    width: 1px ;
+    height: 23px;
+    background: #A9ADB2;
+    left: 4px;
+    position: absolute;
+    top: 18px;
+}
+.approvalPeoplesContent > li:last-child::after{
+    display: none;
+}
+.iconBlock{
+    display: flex;
+    width: 10px;
+    /* height: 63px; */
+    padding-top: 3px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.approversInfoContent{
+    display: flex;
+    width: 152px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+.approverInfoContentBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+}
+.approverInfoContentBlock > span:nth-child(1){
+    font-size: 14px;
+    line-height: 16px;
+}
+.approverInfoContentBlock > span:nth-child(2){
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--content-secondary);
+}
+.approvedIcon{
+    display: flex;
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 320px;
+    background: var(--success-color);
+}
+.notApprovedIcon{
+    width: 6px;
+    height: 6px;
+    border-radius: 320px;
+    background: #D2D3D1;
+}
+.approvedItemStatusBlock > button{
+    padding: 9px 16px;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.statusRight > button{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 6px;
+}

@@ -27,7 +27,7 @@ export default function CollectingResponsesActions({lead}: CollectingResponsesPr
         <>
         <div className={cls.collectingResponsesContainer}>
             <div className={cls.collectingResponsesContent}>
-                <Badge type={'status'} text={'Идет прием откликов'} />
+                <Badge type='status' text={'Идет прием откликов'} />
                 <div className={cls.responsesDetails}>
                     <div>
                         <span>Отклики</span>

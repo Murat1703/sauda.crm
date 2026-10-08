@@ -28,7 +28,10 @@ export default function ApprovalActions({lead}: ApprovalActionsProps) {
         <>
         <div className={cls.approvalActionsContainer}>
             <div className={cls.approvalActionsInfo}>
-                <Badge type={'status'} text={LeadStatusLabels[lead.status]} />
+                <Badge 
+                    type='status' 
+                    text={LeadStatusLabels[lead.status]} 
+                />
                 <div className={cls.approvalsDetails}>
                     <div className={cls.approvalsDetailsInfo}>
                         {lead.approvals.map((approval)=>(

@@ -60,3 +60,6 @@ export {default as GreenApprovedIcon } from './GreenApprovedIcon'
 
 export {default as FilterNewIcon } from './FilterNewIcon'
 export {default as CalendarIcon } from './CalendarIcon'
+
+
+export {default as CheckStatusIcon } from './CheckStatusIcon'

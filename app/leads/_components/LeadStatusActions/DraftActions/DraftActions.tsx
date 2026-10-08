@@ -11,7 +11,7 @@ type DraftActionsProps = {
 export default function DraftActions({status}: DraftActionsProps) {
     return(
         <div className={cls.draftActions}>
-            <Badge type={'status'} text={status} />
+            <Badge type='status' text={status} />
             <div className={cls.bottom}>
                 <Button variant='secondary'>
                     <EditIcon />

@@ -16,7 +16,7 @@ type LeadDetailsprops = {
     lead: Lead,
     onClose: ()=>void,
     showActiveTab: string,
-    changeTab: (tab: LeadDetailsTab | null)=>void
+    changeTab: (tab: LeadDetailsTab | null )=>void
 }
 
 const tabsData = [
@@ -43,7 +43,7 @@ export default function LeadDetails({lead, onClose, showActiveTab, changeTab}:Le
 
     const handleChange = (value: string) => {
         setActiveTab(value);
-        changeTab(value)
+        changeTab(value as LeadDetailsTab)
     };
 
     return(
