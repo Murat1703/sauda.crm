@@ -15,35 +15,69 @@ export default function ApprovalItem({approvalItem}:ApprovalItemProps){
     return(
         <CardItem>
             <div className={cls.approvedItemContainer}>
-                <div className={cls.approvedItemTitleBlock}>
-                    <div className={cls.top}>
-                        <div className={cls.objectInfo}>
-                            <span>{approvalItem.number}</span>
+                {approvalItem.type == 'purchase_request' 
+                ?
+                <div className={cls.left}>
+                    <div className={cls.approvedItemTitleBlock}>
+                        <div className={cls.top}>
+                            <div className={cls.objectInfo}>
+                                <span>{approvalItem.number}</span>
+                                <span>{approvalItem.object}</span>
+                            </div>
+                            <h4 className={cls.approvalItemTitle}>{approvalItem.title}</h4>
+                        </div>
+                        <div className={cls.categoriesList}>
+                            {approvalItem.categories.map((item, index)=>(
+                                <Badge 
+                                    text={item} 
+                                    key={index} 
+                                    type="category"
+                                    className={cls[approvalItem.status]}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                    <div className={cls.approvedItemDateBlock}>
+                        <div className={cls.deadLine}>
+                            <span>Даты приема:</span>
+                            <span>{formatDate(approvalItem.createdAt)}</span>
+                        </div>
+                        <div className={cls.deadLine}>
+                            <span>Ответственный</span>
+                            <span>{approvalItem.initiator.name}</span>
+                        </div>
+                    </div>
+                </div>
+                :
+                <div className={cls.left}>
+                    <div className={cls.approvedItemDealTitleBlock}>
+                        <h4>{approvalItem.number}</h4>
+                        <div className={cls.approvedItemObjectDetails}>
+                            <span>{approvalItem.object}</span>
+                            <span>{approvalItem.initiator.name}</span>
+                        </div>
+                        <div className={cls.approvalItemDealRequest}>
+                            <span>RQ-0003741: Электромонтажные работы и материалы</span>
+                            <span>Полная</span>
+                        </div>
+                        <div className={`${cls.approvalItemDealRequest } ${cls.approvalItemCompanyInfo}`}>
+                            <div></div>
                             <span>{approvalItem.object}</span>
                         </div>
-                        <h4 className={cls.approvalItemTitle}>{approvalItem.title}</h4>
                     </div>
-                    <div className={cls.categoriesList}>
-                        {approvalItem.categories.map((item, index)=>(
-                            <Badge 
-                                text={item} 
-                                key={index} 
-                                type="category"
-                                className={cls[approvalItem.status]}
-                            />
-                        ))}
+                    <div className={cls.approvedItemDateBlock}>
+                        <div className={cls.deadLine}>
+                            <span>Сумма:</span>
+                            <span>{formatDate(approvalItem.createdAt)}</span>
+                        </div>
+                        <div className={cls.deadLine}>
+                            <span>Бюджет</span>
+                            <span>{approvalItem.budget}</span>
+                        </div>
                     </div>
+
                 </div>
-                <div className={cls.approvedItemDateBlock}>
-                    <div className={cls.deadLine}>
-                        <span>Даты приема:</span>
-                        <span>{formatDate(approvalItem.createdAt)}</span>
-                    </div>
-                    <div className={cls.deadLine}>
-                        <span>Ответственный</span>
-                        <span>{approvalItem.initiator.name}</span>
-                    </div>
-                </div>
+                }
                 <div className={cls.approvedItemStatusBlock}>
                     <div className={cls.statusContainer}>
                         <div className={cls.statusLeft}>
@@ -78,9 +112,15 @@ export default function ApprovalItem({approvalItem}:ApprovalItemProps){
                             </button>
                         </div>
                     </div>
+                    {((approvalItem.status !== 'canceled') && (approvalItem.status !== 'rejected') )?
                     <Button variant="topBtn">
                         Согласование
                     </Button>
+                    :<div className={cls.canceledReason}>
+                        <h4>Причина отказа:</h4>
+                        <p>Мы уже закупали данные товары в прошлой заявке, пожалуйста проверьте сметы.</p>
+                    </div>
+                    }
                 </div>
             </div>
         </CardItem>

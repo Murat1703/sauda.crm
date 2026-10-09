@@ -3,6 +3,11 @@
     align-items: flex-start;
     flex: 1 0 0;
 }
+.left{
+    flex: 1 0 0;
+    display: flex;
+    align-items: flex-end;
+}
 .approvedItemTitleBlock{
     display: flex;
     width: 444px;
@@ -220,4 +225,92 @@
     padding: 10px;
     align-items: center;
     gap: 6px;
+}
+.canceledReason{
+    display: flex;
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid var(--border-thin, rgba(0, 0, 0, 0.07));
+}
+.canceledReason > h4{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    color: var(--content-secondary);
+    width: 120px;
+}
+.canceledReason > p{
+    font-size: 14px;
+    line-height: 16px;
+}
+.approvedItemDealTitleBlock{
+    display: flex;
+    width: 368px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    align-self: stretch;
+}
+.approvedItemDealTitleBlock > h4{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.007px;
+    font-family: var(--title-font), sans-serif;
+}
+.approvedItemObjectDetails{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.approvedItemObjectDetails > span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    color: var(--content-secondary);
+}
+.approvalItemDealRequest{
+    display: flex;
+    width: 309px;
+    padding: 5px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    border: 1px solid var(--border-low, rgba(0, 0, 0, 0.16));
+}
+.approvalItemDealRequest > span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+
+}
+.approvalItemDealRequest > span:nth-child(1){
+    flex: 1 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.approvalItemDealRequest > span:nth-child(2){
+    color: var(--content-secondary);
+}
+.approvalItemCompanyInfo{
+    width: fit-content;
+}
+.approvalItemCompanyInfo > div{
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--border-thin, rgba(0, 0, 0, 0.07));
+    aspect-ratio: 1/1;
+    background: var(--content-secondary);
+    overflow: hidden;
 }
