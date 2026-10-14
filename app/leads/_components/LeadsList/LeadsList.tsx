@@ -11,7 +11,6 @@ type LeadsListProps = {
     leads: Lead[];
 };
 
-
 export default function LeadsList({leads}:LeadsListProps){
 
     const tabsData: TabItemProps[] = [

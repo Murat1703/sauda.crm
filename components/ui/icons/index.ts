@@ -61,5 +61,13 @@ export {default as GreenApprovedIcon } from './GreenApprovedIcon'
 export {default as FilterNewIcon } from './FilterNewIcon'
 export {default as CalendarIcon } from './CalendarIcon'
 
-
 export {default as CheckStatusIcon } from './CheckStatusIcon'
+export {default as LeadsFilledIcon } from './LeadsFilledIcon'
+
+export {default as ApprovalsFilledIcon } from './ApprovalsFilledIcon'
+export {default as DealsFilledIcon } from './DealsFilledIcon'
+
+export {default as DeliveriesFilledIcon } from './DeliveriesFilledIcon'
+export {default as InvoicesFilledIcon } from './InvoicesFilledIcon'
+
+export {default as DocumentsFilledIcon } from './DocumentsFilledIcon'

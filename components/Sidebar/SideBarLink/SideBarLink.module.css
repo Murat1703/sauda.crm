@@ -13,3 +13,6 @@
 .activeLink{
     background: var(--bg-secondary)
 }
+.activeLink > svg path{
+    fill:  var(--content-primary)
+}
