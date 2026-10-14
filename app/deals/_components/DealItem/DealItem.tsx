@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import Tooltip from '@/components/ui/Tooltip'
 import Badge from '@/components/ui/Badge'
-import { ApprovedIcon } from '@/components/ui/icons'
+import { ApprovedIcon, DeliveriesIcon, DocumentsIcon, LeadsIcon, MoreIcon, ShowMoreIcon } from '@/components/ui/icons'
 
 type DealItemProps = {
     deal: Deal
@@ -64,37 +64,54 @@ export default function DealItem({deal}:DealItemProps){
                 <Badge text={DealStatusLabels[deal.status]} className={cls[deal.status]}/>
                 {deal.status == "approval" 
                 ? 
-                <div className={cls.approvalContainer}>
-                    <div>
-                        <ul className={cls.approvalsList}>
-                            {deal.approvals.map((item, index)=>(
-                                <li key={index}>
-                                    <div className={cls.icon}>
-                                        {item.status=="approved" && <div className={cls.approvedIcon}><ApprovedIcon /></div>}
-                                        {item.status!=="approved" && <div className={cls.statusIcon}></div>}
-                                    </div>
-                                    <div className={cls.personInfo}>
-                                        <span className={item.status==="approved"? cls.approvedPerson: ""}>{item.fullName}</span>
-                                        <span>{item.position}</span>
-                                    </div>
+                <div className={cls.rightBlock}>
+                    <div className={cls.approvalContainer}>
+                        <div>
+                            <ul className={cls.approvalsList}>
+                                {deal.approvals.map((item, index)=>(
+                                    <li key={index}>
+                                        <div className={cls.icon}>
+                                            {item.status=="approved" && <div className={cls.approvedIcon}><ApprovedIcon /></div>}
+                                            {item.status!=="approved" && <div className={cls.statusIcon}></div>}
+                                        </div>
+                                        <div className={cls.personInfo}>
+                                            <span className={item.status==="approved"? cls.approvedPerson: ""}>{item.fullName}</span>
+                                            <span>{item.position}</span>
+                                        </div>
 
-                                </li>
-                            ))}
-                        </ul>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 :
-                <div className={cls.paymentsBlock}>
-                    <div>
-                        <span>Поставки</span>
-                        <span>{deal.responses.received} / {deal.responses.total}</span>
+                <div className={cls.rightBlock}> 
+                    <div className={cls.paymentsBlock}>
+                        <div>
+                            <span>Поставки</span>
+                            <span>{deal.responses.received} / {deal.responses.total}</span>
+                        </div>
+                        <div>
+                            <span>Оплаты</span>
+                            <span>{deal.positions.completed} / {deal.positions.total}</span>
+                        </div>
                     </div>
-                    <div>
-                        <span>Оплаты</span>
-                        <span>{deal.positions.completed} / {deal.positions.total}</span>
-                    </div>
-                </div>}
+                </div>
+                }
             </div>
+            <div className={cls.buttonsBlock}>
+                <button>
+                    <ShowMoreIcon />
+                </button>
+                <button>
+                    <DeliveriesIcon />
+                </button>
+                <button>
+                    <DocumentsIcon />
+                </button>
+            </div>
+
         </CardItem>
     )
 }
