@@ -1,0 +1,12 @@
+.cardButton{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 6px;
+    border-radius: 48px;
+    width: 40px;
+    height: 40px;
+}
+.cardButton:hover{
+    background: var(--hover-low, rgba(32, 33, 33, 0.10));
+}

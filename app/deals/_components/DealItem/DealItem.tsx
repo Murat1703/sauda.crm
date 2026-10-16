@@ -68,7 +68,7 @@ export default function DealItem({deal}:DealItemProps){
                     <div className={cls.approvalContainer}>
                         <div>
                             <ul className={cls.approvalsList}>
-                                {deal.approvals.map((item, index)=>(
+                                {deal.approvals?.map((item, index)=>(
                                     <li key={index}>
                                         <div className={cls.icon}>
                                             {item.status=="approved" && <div className={cls.approvedIcon}><ApprovedIcon /></div>}

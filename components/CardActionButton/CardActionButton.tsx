@@ -16,7 +16,12 @@ export default function CardActionButton({ cardActionType, children, onClick }: 
 
     return(
         <>
-        <button className={cls.cardActionButton} onClick={onClick} onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
+        <button 
+            className={cls.cardActionButton} 
+            onClick={onClick} 
+            onMouseEnter={() => setIsOpen(true)} 
+            onMouseLeave={() => setIsOpen(false)}
+        >
             {children}
             {(isOpen && cardActionType!=="") && <Tooltip text={cardActionType == "Заявка" ? "К заявке" : cardActionType == "Отклики" ? "Отклики" : "Сравнение"} />  }
 

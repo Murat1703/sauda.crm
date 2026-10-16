@@ -1,0 +1,47 @@
+.collectingResponsesContent{
+    display: flex;
+}
+.left{
+    display: flex;
+    width: 236px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: flex-end;
+}
+.left > span{
+    background: var(--bg-process-light, #DCE9FA);
+    color: var(--content-process, #076AEB);
+}
+.responsesList{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+.responsesList > li{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+.responsesList > li > span{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    color: var(--content-primary);
+}
+.responsesList > li > span:nth-child(1){
+    color: var(--content-secondary);
+    display: -webkit-box;
+    width: 168px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}

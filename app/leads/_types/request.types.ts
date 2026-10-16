@@ -8,6 +8,7 @@ export type RequestStatus =
   | "completed"
   | "archived";
 
+
 export type RequestDetailsTab = "details" | "views" | "responses";
 
 export type RequestStatusInfo = {

@@ -24,7 +24,7 @@ export interface Deal {
     number: string
     residentialComplex: string
     responsible: string,
-    approvals: DealApprover[],
+    approvals?: DealApprover[],
     request: {
         number: string
         title: string

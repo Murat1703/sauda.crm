@@ -71,3 +71,6 @@ export {default as DeliveriesFilledIcon } from './DeliveriesFilledIcon'
 export {default as InvoicesFilledIcon } from './InvoicesFilledIcon'
 
 export {default as DocumentsFilledIcon } from './DocumentsFilledIcon'
+export {default as PrivateIcon } from './PrivateIcon'
+
+export {default as WhiteCheckIcon} from './WhiteCheckIcon'

@@ -1,0 +1,69 @@
+.approvalsList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.approvalItem{
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+.personInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+}
+.personInfo > span:nth-child(1){
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--content-primary);
+}
+.personInfo > span:nth-child(2){
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--content-secondary);
+}
+.icon{
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:6px;
+    position: relative;
+}
+.approvalItem:last-child> .icon::after{
+    display: none;
+}
+.icon::after{
+    bottom: -28px;
+    left: 6px;
+    margin-left: -2px;
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 23px;
+    border-radius: 32px;
+    background: var(--border-low, rgba(0, 0, 0, 0.16));
+}
+.approvedIcon{
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--content-success, #009466);
+}
+.approvedIcon > svg{
+    position: relative;
+    z-index: 3;
+}
+.notApproved{
+    width: 6px;
+    height: 6px;
+    background: #D2D3D1;
+    border-radius: 50%;
+}
